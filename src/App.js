@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Home from './Home'
+import Films from './Films'
+import FilmsShe from './FilmsShe'
+import FilmsHatting from './FilmsHatting'
+import Texts from './Texts'
+import TextsGarden from './TextsGarden'
+import About from './About'
 
-function App() {
+const Routing = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/films">
+          <Films />
+        </Route>
+        <Route exact path="/films/she">
+          <FilmsShe />
+        </Route>
+        <Route exact path="/films/hatting">
+          <FilmsHatting />
+        </Route>
+        <Route exact path="/texts">
+          <Texts />
+        </Route>
+        <Route exact path="/texts/garden">
+          <TextsGarden />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
-export default App;
+export default Routing
