@@ -4,17 +4,19 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Home from './Home'
-import Films from './Films'
-import FilmsShe from './FilmsShe'
-import FilmsHatting from './FilmsHatting'
-import Texts from './Texts'
-import TextsGarden from './TextsGarden'
-import About from './About'
+import Home from './pages/Home'
+import Films from './pages/Films'
+import FilmsShe from './pages/FilmsShe'
+import FilmsHatting from './pages/FilmsHatting'
+import Texts from './pages/Texts'
+import TextsGarden from './pages/TextsGarden'
+import About from './pages/About'
+import Navbar from './Navbar'
 
 const Routing = () => {
   return (
     <Router>
+    <Navbar />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -34,7 +36,7 @@ const Routing = () => {
         <Route exact path="/texts/garden">
           <TextsGarden />
         </Route>
-        <Route path="/about">
+        <Route exact path="/about">
           <About />
         </Route>
       </Switch>

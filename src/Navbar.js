@@ -1,12 +1,10 @@
 import React from 'react'
 import {
-    BrowserRouter as Router,
     Link
   } from "react-router-dom";
 
 export default function Navbar() {
     return (
-      <Router>
         <div>
           <ul>
             <li>
@@ -16,13 +14,15 @@ export default function Navbar() {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/dashboard">Dashboard</Link>
+              <Link to="/texts">Texts</Link>
+            </li>
+            <li>
+              <Link to="/films">Films</Link>
             </li>
           </ul>
   
           <hr />
           
         </div>
-      </Router>
     );
   }
