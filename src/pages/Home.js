@@ -1,5 +1,5 @@
 import React from 'react';
-import myVideo from '../assets/main_small.mp4';
+import myVideo from '../assets/cropped/main_small.mp4';
 
 const Home = () => {
   return (
