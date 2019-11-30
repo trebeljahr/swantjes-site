@@ -1,10 +1,11 @@
 import React from 'react';
+import Book from './Book';
 
 const Garden = () => {
   return (
-    <div>
-      <h1>Garden</h1> 
-    </div>
+    <div className='fullScreen topLeft' id='filmsPage'>
+          <Book color={'garden-color'} />
+    </div>  
   );
 }
 

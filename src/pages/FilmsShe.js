@@ -1,8 +1,11 @@
 import React from 'react';
+import Book from './Book';
 
 const She = () => {
   return (
-    <div>She</div>
+    <div>
+      <Book color={'she-color'} />
+    </div>
   );
 }
 

@@ -1,10 +1,10 @@
 import React from 'react';
-import myVideo from '../assets/cropped/main_small.mp4';
+import mainAnimation from '../assets/cropped/main_small.mp4';
 
 const Home = () => {
   return (
     <div className='fullScreen topLeft'>
-      <video autoPlay="autoplay" muted loop id="myVideo" src={myVideo} className='fullScreenVideo'></video>
+      <video autoPlay="autoplay" muted loop src={mainAnimation} className='fullScreenVideo'></video>
     </div>
   )
 }

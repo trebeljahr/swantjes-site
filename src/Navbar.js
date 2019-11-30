@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {
-    Link
+    NavLink, Route
   } from "react-router-dom";
 
 export default function Navbar() {
@@ -8,26 +8,40 @@ export default function Navbar() {
     const toggleMenu = () => {
       setMenu((oldMenu)=>!oldMenu)
     }
+
     return (
-      
-                   <div className="navbar topLeft">
-            <div onClick={toggleMenu} id='toggleMenu' className='center'><h2>Menu</h2></div> <div className='verticalLine'/>  
+          <div className="navbar topLeft">
+            <div onClick={toggleMenu} id='toggleMenu' className='center'>
+              <h2>Menu</h2>
+            </div> 
+            <div className='verticalLine'/>  
             {
-              menu?     <> 
-              <h2>
-              <Link to="/">Home</Link>
-            </h2>
-            <h2>
-              <Link to="/about">About</Link>
-            </h2>
-            <h2>
-              <Link to="/texts">Texts</Link>
-            </h2>
-            <h2>
-              <Link to="/films">Films</Link>
-</h2></>:<h2>Swantje Furtak</h2>}</div>
-             
-            
-        
+              menu?
+              <> 
+                <h2>
+                  <NavLink activeStyle={{color: 'blue'}} exact to="/">Home</NavLink>
+                </h2>
+                <h2>
+                  <NavLink  activeStyle={{color: 'blue'}} to="/about">About</NavLink>
+                </h2>
+                <h2>
+                  <NavLink  activeStyle={{color: 'blue'}} to="/texts">Texts</NavLink>
+                </h2>
+                <Route path="/texts">
+                      <NavLink  activeStyle={{color: 'blue'}} to="/texts/garden">Garden</NavLink>
+                </Route>
+                <h2>
+                  <NavLink  activeStyle={{color: 'blue'}} to="/films">Films</NavLink>
+                </h2>
+                <Route path="/films">
+                      <NavLink  activeStyle={{color: 'blue'}} to="/films/she">She</NavLink>
+                      <NavLink  activeStyle={{color: 'blue'}} to="/films/work">Work</NavLink>
+                      <NavLink  activeStyle={{color: 'blue'}} to="/films/short">Short</NavLink>
+                </Route>
+              </>
+              :
+              <h2>Swantje Furtak</h2>
+            }
+          </div>
     );
   }
