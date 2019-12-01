@@ -20,7 +20,7 @@ const Films = () => {
         </section>
         <section id="work">
             <Link to="/films/work" className='center'>
-              <video autoPlay="autoplay" muted loop src={workVideo} className='filmsVideo'></video>
+              <video autoPlay="autoplay" muted loop src={workVideo} className='filmsVideo' id="workVideo"></video>
             </Link>
             <a className='scrollDownContainer' href="#shortFilms">
             <div className='scrollDown' >More</div>
@@ -28,7 +28,7 @@ const Films = () => {
         </section>
         <section id="shortFilms">
             <Link to="/films/short" className='center'>
-            <video id="shortFilmsAnimation" autoPlay="autoplay" muted loop src={shortFilmsVideo} className='filmsVideo'></video>
+            <video id="workVideo" autoPlay="autoplay" muted loop src={shortFilmsVideo} className='filmsVideo'></video>
             </Link>
         </section>
     </div>  

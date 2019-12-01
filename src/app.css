@@ -38,6 +38,10 @@ section {
     height: 90vh;
 }
 
+#gardenVideo {
+    height: auto;
+}
+
 .filmsVideo {
     overflow: hidden;
     object-fit: cover;
@@ -49,7 +53,7 @@ section {
     padding: 0;
 }
 
-#filmsPage {
+#filmsPage, #textsPage {
     scroll-behavior: smooth !important;
     width: auto;
     overflow-y: scroll;
@@ -102,7 +106,7 @@ a:active {
     padding: 0;
 }
 
-.gardenVideo {
+/* .gardenVideo {
     object-fit: contain;
     margin-top: -4px;
     padding-top: 0;
@@ -110,7 +114,7 @@ a:active {
     left: 0;
     top: 0;
     width: 100%;
-}
+} */
 
 .scrollDown {
     color: inherit;
@@ -134,7 +138,6 @@ a:active {
 }
 
 .scrollDownContainer {
-    cursor: s-resize;
     border-radius: 100%;
     display: flex;
     justify-content: center;
