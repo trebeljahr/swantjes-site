@@ -1,25 +1,54 @@
 import React, {useState} from 'react';
 
-const Book = ({color}) => {
+export const Book = ({color, content}) => {
   const [page, setPage] = useState(0);
 
   const previousPage = () => {
-      setPage((oldPage)=>oldPage-1)
+    setPage((oldPage)=>{
+      if (page > 0) {
+        return oldPage-1
+      }
+      return oldPage
+    })  
   }
+
   const nextPage = () => {
-    setPage((oldPage)=>oldPage+1)
-}
+      setPage((oldPage)=>{
+        if (page < content.left.length-1 && page < content.right.length-1) {
+          return oldPage+1
+        }
+        return oldPage
+      })
+  }
+
   return (
     <div className={`fullScreen topLeft pageContainer ${color}`}>
-        <div style={{position: 'absolute', top: 0, left: '50%', zIndex: 10, background: 'white'}}>{page}</div>
-        <div className='leftPage'>Left Page
-            <button onClick={previousPage} className='arrow left' id='previousPageArrow'/>
+        <div className='leftPage center'>
+          {content && content.left && content.left[page]}
+          {page > 0 && <i onClick={previousPage} className='arrow left' id='previousPageArrow'/>}
+          <div className='pageNumber' style={{left: "5vw"}}>{(page+1)*2-1}</div>
         </div>
-        <div className='rightPage'>Right Page
-            <button onClick={nextPage} className='arrow right' id='nextPageArrow'/>
+        <div className="pageDivider"/>
+        <div className='rightPage center'>
+            {content && content.right && content.right[page]}
+            {page < content.right.length-1 && <i onClick={nextPage} className='arrow right' id='nextPageArrow'/>}
+            <div className='pageNumber'  style={{right: "5vw"}}>{(page+1)*2}</div>
         </div>
     </div>  
   );
 }
 
-export default Book
+export const RPage = ({children}) => {
+  return <Page orientation={'right'}>{children}</Page>
+}
+
+export const LPage = ({children}) => {
+  return <Page orientation={'left'}>{children}</Page>
+}
+
+const Page = ({children, orientation}) => {
+  return <div className={`${orientation}-page-content`}>
+    {children}
+  </div>
+}
+
