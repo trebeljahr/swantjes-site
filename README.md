@@ -1,35 +1,97 @@
-[22:00, 10.12.2019] Swantje: MENÜ
-#####-reihenfolge der schrift: home films about contact
-#####-lass uns mal probieren, die schrift direkt aufs holz zu setzen, dann klappt so etwas halbdurchsichtiges auf, wo das menü drauf steht. wie du schon am telefon gesagt hattest
-#####-schrifttyp avenir, alle buchstaben groß geschrieben
--für die einzelnen notizbücher bleiben die weiße seiten so in ihrer größe, nach oben und unten nur mehr von der notizbuchfarbe (und damit platz oben für das aufklappbare menü, unten für seitenzahlen: könnte man unten einfach eine zahlenleiste einführen, die man immer sieht? so viele zahlen wie seiten. ich werde sowieso nie mehr als 12 seiten wahrscheinlich haben
-[22:00, 10.12.2019] Swantje: SUB SUB 
--können wir die animationen bei den notizbüchern nur einmal ablaufen lassen/nicht als gif. also blaue farbe kommt raus, so nach dem motto: man sieht es sich an es bleibt stehen. will ich drauf klicken? 
--erstmal garden, und short rausnehmen, damit bleibt nur noch FILMS (she und work)
-[22:00, 10.12.2019] Swantje: CONTACT (ehemals ABOUT) 
--können wir die animation langsamer ablaufen lassen? soll ich sie neu machen oder kannst du das sogar mit irgendwem schnellen hack. 
-sie nimmt sonst zu viel aufmerksamkeit, wenn ich daneben noch text haben will.
-[22:00, 10.12.2019] Swantje: NOTEBOOKS 
--eben die formatveränderung siehe menü
--können wir eine first page (von der doppelseite gibt es nur die rechte) und eine lastpage (von der doppelseite gibt es nur die linke) machen? siehe skizze auf dem bild von heut morgen
-[22:00, 10.12.2019] Swantje: ZUGRIFF 
--text neben about 
--contact 
--in den notizbüchern
-[22:00, 10.12.2019] Swantje: sooo und jetzt TEIL 2 (der spaßigere ausprobier-lernteil)
-eigentlich recht ähnlich zu aliceaedy.com sogar ziemlich genauso würde ich es mögen
+<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+<p align="center">
+  <a href="https://www.gatsbyjs.org">
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby's default starter
+</h1>
 
-home 
--weißer hintergrund in kleinem kästchen läuft die home animation, darunter ein kleiner text
+Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
-menü
--gern so aufklappen wie ihrs
--nur nicht so vollgepackt (eben nur home, films, about und contact) 
+_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
-sagen wir man klickt jetzt auf films, dann kommt man zu meinen zwei notizbüchern (she und work) 
--deren animation läuft ebenso in kästchen, darunter ist platz für einen kleinen text zur projektbescvreibung
--klickt man auf das notizbuch färbt sich der bildschirm komplett in der farbe (die menü und „swantje furtak“ schrift farbe wird weiß) und man kann im notizbuch runterscrollen: video text video text
+## 🚀 Quick start
 
--beim about wieder in kästchen die animation 
+1.  **Create a Gatsby site.**
 
-(für contact überleg ich mir noch, ob ich meine mailadresse oder ein kommentarfeld hinterlasse, auch allgemein wie sie aufgebaut ist, weiß ich noch nicht genau, kannst du sie erstmal freilassen?)
+    Use the Gatsby CLI to create a new site, specifying the default starter.
+
+    ```shell
+    # create a new Gatsby site using the default starter
+    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    ```
+
+1.  **Start developing.**
+
+    Navigate into your new site’s directory and start it up.
+
+    ```shell
+    cd my-default-starter/
+    gatsby develop
+    ```
+
+1.  **Open the source code and start editing!**
+
+    Your site is now running at `http://localhost:8000`!
+
+    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+
+    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+
+## 🧐 What's inside?
+
+A quick look at the top-level files and directories you'll see in a Gatsby project.
+
+    .
+    ├── node_modules
+    ├── src
+    ├── .gitignore
+    ├── .prettierrc
+    ├── gatsby-browser.js
+    ├── gatsby-config.js
+    ├── gatsby-node.js
+    ├── gatsby-ssr.js
+    ├── LICENSE
+    ├── package-lock.json
+    ├── package.json
+    └── README.md
+
+1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+
+2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+
+3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+
+4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+
+5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+
+6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+
+7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+
+8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+
+9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+
+10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+
+11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+
+12. **`README.md`**: A text file containing useful reference information about your project.
+
+## 🎓 Learning Gatsby
+
+Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+
+- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+
+- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+
+## 💫 Deploy
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+
+<!-- AUTO-GENERATED-CONTENT:END -->
