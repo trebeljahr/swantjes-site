@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+video::-webkit-media-controls-start-playback-button {
+  display: none;
+  pointer-events: none;
+}
+
+h2 {
+  font-weight: 400;
+  margin: 0 50px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-emphasis: none;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: black;
+}
+a:active {
+  color: black;
+}
+
+section {
+  position: relative;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.fullScreen {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.fullScreenVideo,
+.filmsVideo {
+  overflow: hidden;
+  object-fit: cover;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.fullScreenVideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+#gardenVideo {
+  height: auto;
+}
+
+.filmsVideo {
+  position: relative;
+  min-height: 50vh;
+  width: 100vw;
+}
+
+#filmsPage,
+#textsPage {
+  scroll-behavior: smooth !important;
+  overflow-x: hidden;
+}
+
+.scrollDown {
+  color: inherit;
+  font-size: 0.8em;
+  letter-spacing: 0.225em;
+  opacity: 1;
+  outline: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.scrollDown:after {
+  content: "";
+  border-top: 20px solid #d8a737;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  display: block;
+  margin: 10px 0 0 -20px;
+  position: absolute;
+  left: 50%;
+}
+
+.scrollDownContainer {
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 110px;
+  padding-bottom: 20px;
+  border: none;
+  left: 50%;
+  position: absolute;
+  z-index: 10;
+  bottom: 10vh;
+  margin-left: -40px;
+}
+
+.scrollDownContainer:hover {
+  background: grey;
+}
+
+#anotherText {
+  background: #ffdf94;
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  z-index: 1000;
+}
+
+.horizontalLine {
+  margin: 20px;
+  border-top: 1px solid inherit;
+  width: 50vw;
+  height: 3px;
+}

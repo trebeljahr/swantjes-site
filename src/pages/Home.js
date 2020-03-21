@@ -1,15 +1,25 @@
-import React from "react"
+import React, { useEffect } from "react"
 import mainAnimation from "../images/cropped/main_small.mp4"
 
-const Home = () => {
+const Home = ({ setColor }) => {
+  useEffect(() => {
+    setColor("white")
+  }, [setColor])
   return (
-    <div className="fullScreen topLeft">
+    <div
+      style={{
+        marginTop: "30px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       <video
         autoPlay="autoplay"
         muted
         loop
         src={mainAnimation}
-        className="fullScreenVideo"
+        style={{ width: "90vw" }}
       ></video>
     </div>
   )

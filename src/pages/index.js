@@ -1,7 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Home from "./Home"
-import Contact from "./Contact"
 import Navbar from "../components/Navbar"
 import Films from "./Films"
 import She from "./films/She"
@@ -10,36 +9,40 @@ import Short from "./films/Short"
 import Texts from "./Texts"
 import Garden from "./texts/Garden"
 import Layout from "../components/layout.js"
+import About from "./About"
 
 const Routing = () => {
+  const [color, setColor] = useState("white")
   return (
-    <Layout>
+    <Layout color={color}>
       <Router>
-        <Navbar />
+        <Route path="/:id">
+          <Navbar setColor={setColor} />
+        </Route>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home setColor={setColor} />
           </Route>
           <Route exact path="/films">
-            <Films />
+            <Films setColor={setColor} />
           </Route>
           <Route exact path="/films/she">
-            <She />
+            <She setColor={setColor} />
           </Route>
           <Route exact path="/films/work">
-            <Work />
+            <Work setColor={setColor} />
           </Route>
           <Route exact path="/films/short">
-            <Short />
+            <Short setColor={setColor} />
           </Route>
           <Route exact path="/texts">
-            <Texts />
+            <Texts setColor={setColor} />
           </Route>
           <Route exact path="/texts/garden">
-            <Garden />
+            <Garden setColor={setColor} />
           </Route>
-          <Route exact path="/contact">
-            <Contact />
+          <Route exact path="/about">
+            <About setColor={setColor} />
           </Route>
         </Switch>
       </Router>

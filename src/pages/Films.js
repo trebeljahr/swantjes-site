@@ -1,12 +1,15 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import shortFilmsVideo from "../images/cropped/shortfilms_small.mp4"
 import sheVideo from "../images/cropped/she_small.mp4"
 import workVideo from "../images/cropped/work_small.mp4"
 
-const Films = () => {
+const Films = ({ setColor }) => {
+  useEffect(() => {
+    setColor("#1f2839")
+  }, [setColor])
   return (
-    <div className="fullScreen topLeft" id="filmsPage">
+    <div id="filmsPage">
       <section id="she">
         <Link to="/films/she" className="center">
           <video

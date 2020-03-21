@@ -1,92 +1,119 @@
 import React, { useState } from "react"
-import { NavLink, Route } from "react-router-dom"
+import { NavLink, useParams } from "react-router-dom"
 
-export default function Navbar() {
+export default function Navbar({ color }) {
   const [menu, setMenu] = useState(false)
 
   const toggleMenu = () => {
     setMenu(oldMenu => !oldMenu)
   }
-
-  return (
-    <div>
-      <div onClick={toggleMenu} id="toggleMenu" className="center">
-        <h2>Menu</h2>
-      </div>
-      {menu ? (
-        <>
-          <div className="navbar-vertical topLeft">
-            <div onClick={toggleMenu} id="toggleMenu" className="center">
-              <h2>Menu</h2>
-            </div>
-            <VerticalLine />
-            <h2>
-              <NavLink
-                activeStyle={{ color: "red" }}
-                className="navbarLinks"
-                exact
-                to="/"
-              >
-                Home
-              </NavLink>
-            </h2>
-            <h2>
-              <NavLink
-                activeStyle={{ color: "red" }}
-                className="navbarLinks"
-                to="/films"
-              >
-                Films
-              </NavLink>
-            </h2>
-            <h2>
-              <NavLink
-                activeStyle={{ color: "red" }}
-                className="navbarLinks"
-                to="/contact"
-              >
-                Contact
-              </NavLink>
-            </h2>
-            <h2 style={{ marginLeft: "auto", marginRight: 0 }}>
-              Swantje Furtak
-            </h2>
-          </div>
-        </>
-      ) : (
-        ""
-      )}
+  return menu ? (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "column",
+        textTransform: "lowercase",
+        color: color === "white" ? "black" : "white",
+      }}
+    >
+      <h2
+        style={{
+          borderBottom: `2px ${color === "white" ? "black" : "white"} solid`,
+          padding: "10px 40px",
+          letterSpacing: "3px",
+        }}
+        onClick={toggleMenu}
+      >
+        Menu
+      </h2>
+      <h2
+        style={{
+          marginTop: "20px",
+          letterSpacing: "3px",
+        }}
+      >
+        Swantje Furtak
+      </h2>
+    </div>
+  ) : (
+    <div className="navbar-mobile">
+      <h2
+        onClick={toggleMenu}
+        style={{
+          marginTop: "10vh",
+          marginBottom: "30px",
+          letterSpacing: "5px",
+        }}
+      >
+        Menu
+      </h2>
+      <FilmsSubMenu toggleMenu={toggleMenu} />
+      <h2 onClick={toggleMenu}>
+        <NavLink
+          activeStyle={{ fontSize: "1.4em" }}
+          className="navbarLinks"
+          to="/texts"
+        >
+          texts
+        </NavLink>
+      </h2>
+      <h2 onClick={toggleMenu}>
+        <NavLink
+          activeStyle={{ fontSize: "1.4em" }}
+          className="navbarLinks"
+          to="/about"
+        >
+          about
+        </NavLink>
+      </h2>
+      <h2
+        style={{
+          borderTop: `2px black solid`,
+          padding: "30px 20px",
+          letterSpacing: "5px",
+        }}
+        onClick={toggleMenu}
+      >
+        <NavLink to="/">Swantje Furtak</NavLink>
+      </h2>
     </div>
   )
 }
 
-const VerticalLine = () => {
+const FilmsSubMenu = ({ toggleMenu }) => {
+  const { id } = useParams()
+  const [filmSubMenu, setFilmSubMenu] = useState(id === "films")
+
+  const toggleFilmsSubMenu = () => {
+    setFilmSubMenu(oldMenu => !oldMenu)
+  }
   return (
     <>
-      <Route exact path="/">
-        <div className="verticalLine" style={{ backgroundColor: "grey" }} />
-      </Route>
-      <Route exact path="/about">
-        <div className="verticalLine" style={{ backgroundColor: "grey" }} />
-      </Route>
-      <Route exact path="/films">
-        <div className="verticalLine" style={{ backgroundColor: "grey" }} />
-      </Route>
-      <Route exact path="/contact">
-        <div className="verticalLine" style={{ backgroundColor: "grey" }} />
-      </Route>
-      <Route path="/films/work">
-        <div className="verticalLine work-color" />
-      </Route>
-      <Route path="/films/short">
-        <div className="verticalLine short-color" />
-      </Route>
-      <Route path="/films/she">
-        <div className="verticalLine she-color" style={{}} />
-      </Route>
-      <Route path="/texts/garden">
-        <div className="verticalLine garden-color" style={{}} />
-      </Route>
+      <h2 onClick={toggleFilmsSubMenu}>
+        <NavLink
+          activeStyle={{ fontSize: "1.4em" }}
+          className="navbarLinks"
+          to="/films"
+        >
+          films
+        </NavLink>
+      </h2>
+
+      {filmSubMenu && (
+        <div>
+          <h2 onClick={toggleMenu} style={{ fontSize: "0.8em" }}>
+            <NavLink
+              activeStyle={{ textDecoration: "underline" }}
+              className="navbarLinks"
+              exact
+              to="/films/she"
+            >
+              she
+            </NavLink>
+          </h2>
+        </div>
+      )}
     </>
   )
 }

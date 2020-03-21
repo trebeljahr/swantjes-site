@@ -1,0 +1,35 @@
+.white-text {
+  color: white !important;
+}
+
+.she-color {
+  background: #942f1d;
+}
+
+.work-color {
+  background: #cea47a;
+}
+
+.garden-color {
+  background: #262226;
+}
+
+.short-color {
+  background: #4d4a5b;
+}
+
+.she-text-color {
+  color: #942f1d;
+}
+
+.work-text-color {
+  color: #cea47a;
+}
+
+.garden-text-color {
+  color: #262226;
+}
+
+.short-text-color {
+  color: #4d4a5b;
+}

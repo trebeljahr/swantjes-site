@@ -1,10 +1,10 @@
 import React, { useEffect } from "react"
 
-const She = ({ setColor }) => {
+const About = ({ setColor }) => {
   useEffect(() => {
-    setColor("#1f2839")
+    setColor("#4f2223")
   }, [setColor])
   return <div></div>
 }
 
-export default She
+export default About

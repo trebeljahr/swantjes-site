@@ -1,8 +1,11 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import gardenAnimation from "../images/cropped/garden_small.mp4"
 
-const Texts = () => {
+const Texts = ({ setColor }) => {
+  useEffect(() => {
+    setColor("#013f31")
+  }, [setColor])
   return (
     <div className="fullScreen topLeft" id="textsPage">
       <section id="garden" className="center">

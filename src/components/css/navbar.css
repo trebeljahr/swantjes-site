@@ -1,0 +1,21 @@
+.navbarLinks {
+  margin: 20px;
+}
+.navbar-mobile > * {
+  text-transform: lowercase;
+}
+.navbar-mobile {
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+.navbar-mobile > h2 {
+  margin: 15px;
+  font-weight: 100;
+}

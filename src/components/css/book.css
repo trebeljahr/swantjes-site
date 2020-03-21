@@ -1,0 +1,81 @@
+.leftPage,
+.rightPage {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  height: 100vh;
+}
+
+.leftPage {
+  justify-content: flex-end;
+}
+
+.rightPage {
+  justify-content: flex-start;
+}
+
+.right-page-content,
+.left-page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  width: 48vw;
+  height: 85vh;
+}
+
+.pageDivider {
+  border-left: 3px solid rgb(60, 60, 60);
+  height: 85vh;
+}
+
+.right-page-content {
+  -webkit-box-shadow: inset 86px 0px 200px -82px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 86px 0px 200px -82px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 86px 0px 200px -82px rgba(0, 0, 0, 0.3);
+}
+
+.left-page-content {
+  -webkit-box-shadow: inset -86px 0px 200px -82px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset -86px 0px 200px -82px rgba(0, 0, 0, 0.3);
+  box-shadow: inset -86px 0px 200px -82px rgba(0, 0, 0, 0.3);
+}
+
+.pageNumbersContainer {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  background: grey;
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlightedPageNumber {
+  background: yellow;
+}
+
+#previousPageArrow,
+#nextPageArrow {
+  top: 50%;
+  position: absolute;
+}
+
+#previousPageArrow {
+  left: 10%;
+}
+#nextPageArrow {
+  right: 10%;
+}
+.pageContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: none;
+  align-items: center;
+  justify-content: flex-start;
+}
