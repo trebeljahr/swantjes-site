@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{gY06:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),c=t.n(a),o=t("Bl7J");n.default=function(){return c.a.createElement(o.a,{color:"#1f2839",forceMenu:!0,filmMenu:!0},c.a.createElement("div",null))}}}]);
+//# sourceMappingURL=component---src-pages-films-js-df92812fce4828271ae7.js.map

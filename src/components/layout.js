@@ -1,5 +1,5 @@
 import React from "react"
-import "./css/navbar.css"
+import "./css/main.css"
 import Head from "./header"
 import Navbar from "./navbar"
 
