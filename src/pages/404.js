@@ -1,5 +1,4 @@
 import React from "react"
-import "./css/main.css"
 import Layout from "../components/layout"
 
 const ErrorPage = () => {
