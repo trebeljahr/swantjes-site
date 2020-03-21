@@ -1,14 +1,22 @@
-import React, { useState } from "react"
-import Navbar from "../components/Navbar"
-import Layout from "../components/layout.js"
+import React from "react"
+import mainAnimation from "../images/cropped/main_small.mp4"
+import Layout from "../components/layout"
 
-const Routing = () => {
-  const [color, setColor] = useState("white")
+const Home = ({ location }) => {
   return (
-    <Layout color={color}>
-      <Navbar setColor={setColor} />
+    <Layout location={location} color="white">
+      <div
+        style={{
+          marginTop: "30px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <video autoPlay="autoplay" muted loop src={mainAnimation}></video>
+      </div>
     </Layout>
   )
 }
 
-export default Routing
+export default Home
