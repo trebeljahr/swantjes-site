@@ -2,9 +2,9 @@ import React from "react"
 import mainAnimation from "../images/cropped/main_small.mp4"
 import Layout from "../components/layout"
 
-const Home = ({ location }) => {
+const Home = () => {
   return (
-    <Layout location={location} color="white">
+    <Layout color="white">
       <div
         style={{
           marginTop: "30px",

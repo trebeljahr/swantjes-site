@@ -1,9 +1,9 @@
 import React from "react"
 import Layout from "../../components/layout"
 
-const She = ({ location }) => {
+const She = () => {
   return (
-    <Layout location={location} color="#1f2839">
+    <Layout color="#1f2839" filmMenu={true}>
       <div>She</div>
     </Layout>
   )

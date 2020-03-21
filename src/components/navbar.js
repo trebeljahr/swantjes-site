@@ -1,13 +1,17 @@
 import React, { useState } from "react"
 import Link from "gatsby-link"
 
-export default function Navbar({ color, menu: hasMenu, route }) {
-  const [menu, setMenu] = useState(hasMenu)
-  const subMenu = route.includes("/films")
+export default function Navbar({ color, forceMenu, filmMenu }) {
+  const [menu, setMenu] = useState(false)
+  const [filmSubMenu, setFilmSubMenu] = useState(filmMenu)
+
   const toggleMenu = () => {
     setMenu(oldMenu => !oldMenu)
   }
-  return menu ? (
+  const toggleFilmSubMenu = () => {
+    setFilmSubMenu(oldMenu => !oldMenu)
+  }
+  return menu || forceMenu ? (
     <div className="navbar-mobile">
       <h2
         style={{
@@ -20,45 +24,30 @@ export default function Navbar({ color, menu: hasMenu, route }) {
         menu
       </h2>
       <>
-        <h2>
+        <h2 onClick={toggleFilmSubMenu}>
           <Link
             activeStyle={{ fontSize: "1.4em" }}
-            state={{ menu: false }}
             partiallyActive={true}
             to="/films"
           >
             films
           </Link>
         </h2>
-        {subMenu && (
-          <div>
-            <h2 style={{ fontSize: "0.8em" }}>
-              <Link
-                activeStyle={{ textDecoration: "underline" }}
-                to="/films/she"
-                state={{ menu: false }}
-              >
-                she
-              </Link>
-            </h2>
-          </div>
-        )}
+        {filmSubMenu ? (
+          <h2 style={{ fontSize: "0.8em" }}>
+            <Link activeStyle={{ textDecoration: "underline" }} to="/films/she">
+              she
+            </Link>
+          </h2>
+        ) : null}
       </>
       <h2>
-        <Link
-          activeStyle={{ fontSize: "1.4em" }}
-          state={{ menu: false }}
-          to="/texts"
-        >
+        <Link activeStyle={{ fontSize: "1.4em" }} to="/texts">
           texts
         </Link>
       </h2>
       <h2>
-        <Link
-          activeStyle={{ fontSize: "1.4em" }}
-          state={{ menu: false }}
-          to="/about"
-        >
+        <Link activeStyle={{ fontSize: "1.4em" }} to="/about">
           about
         </Link>
       </h2>
@@ -75,6 +64,7 @@ export default function Navbar({ color, menu: hasMenu, route }) {
   ) : (
     <div
       style={{
+        marginTop: "40px",
         display: "flex",
         alignItems: "center",
         flexDirection: "column",

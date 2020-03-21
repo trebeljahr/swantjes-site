@@ -1,9 +1,9 @@
 import React from "react"
 import Layout from "../../components/layout"
 
-const Garden = ({ location }) => {
+const Garden = () => {
   return (
-    <Layout location={location} color="#013f31">
+    <Layout color="#013f31">
       <div className="fullScreen topLeft" id="filmsPage"></div>
     </Layout>
   )

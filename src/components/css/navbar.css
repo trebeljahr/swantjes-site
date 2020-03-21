@@ -1,6 +1,7 @@
 .navbar-mobile > * {
   text-transform: lowercase;
 }
+
 .navbar-mobile {
   z-index: 10000;
   width: 100vw;
@@ -15,10 +16,11 @@
 .navbar-mobile > h2 {
   margin: 15px;
   font-weight: 100;
+  cursor: pointer;
 }
 video {
   width: 90vw;
-  margin: 50px;
+  margin: 50px 0px;
 }
 body {
   margin: 0;

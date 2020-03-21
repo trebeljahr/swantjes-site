@@ -2,9 +2,9 @@ import React from "react"
 import gardenAnimation from "../images/cropped/garden_small.mp4"
 import Layout from "../components/layout"
 
-const Texts = ({ location }) => {
+const Texts = () => {
   return (
-    <Layout location={location} color="#013f31">
+    <Layout color="#013f31">
       <>
         <video autoPlay="autoplay" muted loop src={gardenAnimation}></video>
       </>
