@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 const About = ({ location }) => {
   return (
     <Layout location={location} color="#4f2223">
-      <div></div>
+      <div>Hello</div>
     </Layout>
   )
 }
