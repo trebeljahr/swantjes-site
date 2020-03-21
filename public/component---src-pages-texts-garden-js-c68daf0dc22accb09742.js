@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{"9EgL":function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),c=t.n(a),l=t("Bl7J");n.default=function(){return c.a.createElement(l.a,{color:"#013f31"},c.a.createElement("div",{className:"fullScreen topLeft",id:"filmsPage"}))}}}]);
-//# sourceMappingURL=component---src-pages-texts-garden-js-c68daf0dc22accb09742.js.map
