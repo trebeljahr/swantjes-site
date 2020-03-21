@@ -1,4 +1,15 @@
-Color Palette:
-dark blue: #1f2839
-dark green: #013f31
-dark red: #4f2223
+This is a small website project - statically generated pages with gatsby and react - for a friend of mine named Swantje Furtak.
+
+When running this, first npm i.
+Then npm start - or gatsby develop.
+Go to localhost:8000 in your browser to see the site in action.
+
+The color palet used:
+BLUE SAPPHIRE - light blue
+#19647E
+YANKEES BLUE - dark blue
+#1F2839
+BRITISH RACING GREEN - dark green
+#013F31
+CAPUT MORTUUM - dark red
+#4F2223
