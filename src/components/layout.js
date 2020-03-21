@@ -10,7 +10,7 @@ const Layout = ({ children, color, forceMenu = false, filmMenu = false }) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         minHeight: "100vh",
         backgroundColor: color,
       }}

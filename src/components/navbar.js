@@ -64,7 +64,7 @@ export default function Navbar({ color, forceMenu, filmMenu }) {
   ) : (
     <div
       style={{
-        marginTop: "40px",
+        marginTop: "10vh",
         display: "flex",
         alignItems: "center",
         flexDirection: "column",
@@ -74,6 +74,7 @@ export default function Navbar({ color, forceMenu, filmMenu }) {
     >
       <h2
         style={{
+          cursor: "pointer",
           borderBottom: `2px ${color === "white" ? "black" : "white"} solid`,
           padding: "10px 40px",
           letterSpacing: "3px",
