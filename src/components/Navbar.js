@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { NavLink, useParams } from "react-router-dom"
+import Link from "gatsby-link"
 
 export default function Navbar({ color }) {
   const [menu, setMenu] = useState(false)
@@ -50,22 +50,22 @@ export default function Navbar({ color }) {
       </h2>
       <FilmsSubMenu toggleMenu={toggleMenu} />
       <h2 onClick={toggleMenu}>
-        <NavLink
+        <Link
           activeStyle={{ fontSize: "1.4em" }}
           className="navbarLinks"
           to="/texts"
         >
           texts
-        </NavLink>
+        </Link>
       </h2>
       <h2 onClick={toggleMenu}>
-        <NavLink
+        <Link
           activeStyle={{ fontSize: "1.4em" }}
           className="navbarLinks"
           to="/about"
         >
           about
-        </NavLink>
+        </Link>
       </h2>
       <h2
         style={{
@@ -75,42 +75,40 @@ export default function Navbar({ color }) {
         }}
         onClick={toggleMenu}
       >
-        <NavLink to="/">Swantje Furtak</NavLink>
+        <Link to="/">Swantje Furtak</Link>
       </h2>
     </div>
   )
 }
 
 const FilmsSubMenu = ({ toggleMenu }) => {
-  const { id } = useParams()
-  const [filmSubMenu, setFilmSubMenu] = useState(id === "films")
-
+  const [filmSubMenu, setFilmSubMenu] = useState(false)
   const toggleFilmsSubMenu = () => {
     setFilmSubMenu(oldMenu => !oldMenu)
   }
   return (
     <>
       <h2 onClick={toggleFilmsSubMenu}>
-        <NavLink
+        <Link
           activeStyle={{ fontSize: "1.4em" }}
           className="navbarLinks"
           to="/films"
         >
           films
-        </NavLink>
+        </Link>
       </h2>
 
       {filmSubMenu && (
         <div>
           <h2 onClick={toggleMenu} style={{ fontSize: "0.8em" }}>
-            <NavLink
+            <Link
               activeStyle={{ textDecoration: "underline" }}
               className="navbarLinks"
               exact
               to="/films/she"
             >
               she
-            </NavLink>
+            </Link>
           </h2>
         </div>
       )}

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { Link } from "react-router-dom"
+import Link from "gatsby-link"
 import shortFilmsVideo from "../images/cropped/shortfilms_small.mp4"
 import sheVideo from "../images/cropped/she_small.mp4"
 import workVideo from "../images/cropped/work_small.mp4"
