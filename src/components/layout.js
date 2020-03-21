@@ -4,22 +4,31 @@ import Head from "./header"
 import Navbar from "./navbar"
 
 const Layout = ({ children, color, location }) => {
-  const {
-    pathname,
-    state: { menu },
-  } = location
+  if (typeof window !== `undefined`) {
+    const {
+      pathname,
+      state: { menu },
+    } = location
+
+    return (
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          minHeight: "100vh",
+          backgroundColor: color,
+        }}
+      >
+        <Navbar color={color} route={pathname} menu={menu} />
+        <Head />
+        {children}
+      </div>
+    )
+  }
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "100vh",
-        backgroundColor: color,
-      }}
-    >
-      <Navbar color={color} route={pathname} menu={menu} />
+    <div>
       <Head />
       {children}
     </div>

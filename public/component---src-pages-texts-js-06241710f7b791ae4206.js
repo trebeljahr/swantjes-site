@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{cCME:function(a,t,e){a.exports=e.p+"static/garden_small-35dc96ad88615b2dc459454b14f93d36.mp4"},fBJ5:function(a,t,e){"use strict";e.r(t);var n=e("q1tI"),o=e.n(n),c=e("cCME"),l=e.n(c),r=e("Bl7J");t.default=function(a){var t=a.location;return o.a.createElement(r.a,{location:t,color:"#013f31"},o.a.createElement(o.a.Fragment,null,o.a.createElement("video",{autoPlay:"autoplay",muted:!0,loop:!0,src:l.a})))}}}]);
+//# sourceMappingURL=component---src-pages-texts-js-06241710f7b791ae4206.js.map

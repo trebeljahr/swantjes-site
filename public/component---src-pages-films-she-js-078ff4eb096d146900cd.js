@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"4BuS":function(n,e,t){"use strict";t.r(e);var a=t("q1tI"),o=t.n(a),c=t("Bl7J");e.default=function(n){var e=n.location;return o.a.createElement(c.a,{location:e,color:"#1f2839"},o.a.createElement("div",null,"She"))}}}]);
+//# sourceMappingURL=component---src-pages-films-she-js-078ff4eb096d146900cd.js.map
