@@ -12,15 +12,13 @@ export default function Navbar({ color, forceMenu, filmMenu }) {
     setFilmSubMenu(oldMenu => !oldMenu)
   }
   return menu || forceMenu ? (
-    <div className="navbar-mobile">
-      <h2
-        style={{
-          marginTop: "10vh",
-          marginBottom: "1.4em",
-          letterSpacing: "5px",
-        }}
-        onClick={toggleMenu}
-      >
+    <div
+      className="menu-container"
+      style={{
+        color: color === "white" ? "black !important" : "white !important",
+      }}
+    >
+      <h2 className="collapsed-menu-button" onClick={toggleMenu}>
         menu
       </h2>
       <>
@@ -51,46 +49,25 @@ export default function Navbar({ color, forceMenu, filmMenu }) {
           about
         </Link>
       </h2>
-      <h2
-        style={{
-          borderTop: `2px black solid`,
-          padding: "30px 20px",
-          letterSpacing: "5px",
-        }}
-      >
+      <h2 className="collapsed-menu-header">
         <Link to="/">Swantje Furtak</Link>
       </h2>
     </div>
   ) : (
     <div
-      style={{
-        marginTop: "10vh",
-        display: "flex",
-        alignItems: "center",
-        flexDirection: "column",
-        textTransform: "lowercase",
-        color: color === "white" ? "black" : "white",
-      }}
+      className="menu-container"
+      style={{ color: color === "white" ? "black" : "white" }}
     >
       <h2
+        className="menu-button"
         style={{
-          cursor: "pointer",
           borderBottom: `2px ${color === "white" ? "black" : "white"} solid`,
-          padding: "10px 40px",
-          letterSpacing: "3px",
         }}
         onClick={toggleMenu}
       >
         Menu
       </h2>
-      <h2
-        style={{
-          marginTop: "20px",
-          letterSpacing: "3px",
-        }}
-      >
-        Swantje Furtak
-      </h2>
+      <h2 className="menu-header">Swantje Furtak</h2>
     </div>
   )
 }
