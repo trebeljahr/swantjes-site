@@ -1,3 +1,4 @@
+require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Swantje Furtaks Website`,
@@ -9,8 +10,8 @@ module.exports = {
     {
       resolve: `gatsby-source-ghost`,
       options: {
-        apiUrl: `https://gatsby.ghost.io`,
-        contentApiKey: `9cc5c67c358edfdd81455149d0`,
+        apiUrl: process.env.GHOST_URL,
+        contentApiKey: process.env.GHOST_CONTENT_API_KEY,
       },
     },
     `gatsby-plugin-react-helmet`,
