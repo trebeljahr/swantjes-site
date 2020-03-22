@@ -12,7 +12,6 @@ const She = () => {
           flexDirection: "column",
           alignItems: "center",
           color: "white",
-          width: "80vw",
           fontFamily: "Helvetica Neue",
         }}
       >
@@ -26,7 +25,7 @@ const She = () => {
           alt=""
           style={{
             marginTop: "20px",
-            width: "90vw",
+            width: "90%",
             objectFit: "contain",
           }}
         />

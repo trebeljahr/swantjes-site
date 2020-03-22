@@ -11,7 +11,7 @@ const Texts = () => {
           flexDirection: "column",
           alignItems: "center",
           color: "white",
-          width: "80vw",
+          width: "80%",
           fontFamily: "Helvetica Neue",
         }}
       >
