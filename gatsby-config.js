@@ -6,6 +6,13 @@ module.exports = {
     author: `Swantje Furtak`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-ghost`,
+      options: {
+        apiUrl: `https://gatsby.ghost.io`,
+        contentApiKey: `9cc5c67c358edfdd81455149d0`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

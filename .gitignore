@@ -24,3 +24,5 @@ yarn-error.log*
 
 # no big assets in repo
 /src/assets/toBig
+
+.env
