@@ -58,7 +58,7 @@ export function MobileNavbar({ color, forceMenu, filmMenu }) {
           letterSpacing: "5px",
         }}
       >
-        <Link to="/">Swantje Furtak</Link>
+        <Link to="/">swantje furtak</Link>
       </h2>
     </div>
   ) : (
@@ -89,7 +89,7 @@ export function MobileNavbar({ color, forceMenu, filmMenu }) {
           letterSpacing: "3px",
         }}
       >
-        Swantje Furtak
+        swantje furtak
       </h2>
     </div>
   )
