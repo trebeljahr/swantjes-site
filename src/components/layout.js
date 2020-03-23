@@ -53,7 +53,8 @@ const Layout = ({ children, color, forceMenu = false, filmMenu = false }) => {
                       }}
                     >
                       <h2>
-                        <Link to="/">swantje furtak</Link>
+                        swantje furtak
+                        <Link to="/"></Link>
                       </h2>
                     </div>
                   </div>
