@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import aboutAnimation from "../images/cropped/about_small.mp4"
+import aboutAnimation from "../images/about_small.mp4"
 
 const About = () => {
   return (

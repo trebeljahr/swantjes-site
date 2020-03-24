@@ -1,5 +1,5 @@
 import React from "react"
-import mainAnimation from "../images/cropped/main_small.mp4"
+import mainAnimation from "../images/main_small.mp4"
 import Layout from "../components/layout"
 
 const Home = () => {
