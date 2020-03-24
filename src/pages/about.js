@@ -5,14 +5,7 @@ import aboutAnimation from "../images/cropped/about_small.mp4"
 const About = () => {
   return (
     <Layout color="#4f2223">
-      <div
-        style={{
-          marginTop: "30px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
+      <div className="container">
         <video autoPlay="autoplay" muted loop src={aboutAnimation}></video>
       </div>
     </Layout>

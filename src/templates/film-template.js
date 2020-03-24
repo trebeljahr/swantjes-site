@@ -10,33 +10,22 @@ const FilmTemplate = ({ data }) => {
   const films = post.html.match(filmRegex)
   const texts = post.html.match(textRegex)
 
-  console.log(post.html)
-  console.log(films)
-  console.log(texts)
-
   var posts = films.map((film, i) => ({ film, text: texts[i] }))
   return (
-    <Layout color="#1f2839" filmMenu={true}>
-      <div
-        style={{
-          marginTop: "30px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          color: "white",
-          width: "100%",
-          gridColumn: 2,
-        }}
-      >
+    <Layout color="#1f2839" sub={"films"}>
+      <div className="container film-container">
         <h1>{post.title}</h1>
         {posts.map(post => (
-          <>
+          <div className="single-film-container">
             <div
               className="iframe-container"
               dangerouslySetInnerHTML={{ __html: post.film }}
             />
-            <div dangerouslySetInnerHTML={{ __html: post.text }} />
-          </>
+            <div
+              className="text-container"
+              dangerouslySetInnerHTML={{ __html: post.text }}
+            />
+          </div>
         ))}
       </div>
     </Layout>

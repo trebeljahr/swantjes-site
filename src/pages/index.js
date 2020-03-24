@@ -5,14 +5,7 @@ import Layout from "../components/layout"
 const Home = () => {
   return (
     <Layout color="white">
-      <div
-        style={{
-          marginTop: "30px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
+      <div className="container">
         <video autoPlay="autoplay" muted loop src={mainAnimation}></video>
       </div>
     </Layout>
