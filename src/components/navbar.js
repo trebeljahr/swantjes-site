@@ -52,28 +52,32 @@ export function Navbar({ desktop = false, color, sub = "" }) {
 
 const DesktopNavbar = ({ data, subMenu, setSubMenu }) => {
   return (
-    <div className="navbar-desktop">
+    <>
       <SwantjeFurtakHeader />
-      {data.films && (
-        <SubMenu
-          link="films"
-          menuPoints={data.films.edges}
-          subMenu={subMenu}
-          setSubMenu={setSubMenu}
-        />
-      )}
-      {data.texts && (
-        <SubMenu
-          link="texts"
-          menuPoints={data.texts.edges}
-          subMenu={subMenu}
-          setSubMenu={setSubMenu}
-        />
-      )}
-      <h2>
-        <Link to="/about">about</Link>
-      </h2>
-    </div>
+      <div className="navbar-desktop">
+        {data.films && (
+          <SubMenu
+            link="films"
+            menuPoints={data.films.edges}
+            subMenu={subMenu}
+            setSubMenu={setSubMenu}
+          />
+        )}
+        {data.texts && (
+          <SubMenu
+            link="texts"
+            menuPoints={data.texts.edges}
+            subMenu={subMenu}
+            setSubMenu={setSubMenu}
+          />
+        )}
+        <h2>
+          <Link to="/about" activeStyle={{ color: "grey" }}>
+            about
+          </Link>
+        </h2>
+      </div>
+    </>
   )
 }
 
@@ -107,19 +111,21 @@ const MobileNavbar = ({ data, subMenu, setSubMenu }) => {
       <h2 onClick={menuOff}>
         <Link
           to="/about"
-          activeStyle={{ fontWeight: subMenu === "" ? 800 : 300 }}
+          activeStyle={{ color: subMenu === "" ? "grey" : "inherit" }}
         >
           about
         </Link>
       </h2>
-      <hr className="rounded" style={{ width: "25%" }} />
+      <hr className="rounded" style={{ width: "25%", marginBottom: "30px" }} />
       <SwantjeFurtakHeader menuOff={menuOff} />
     </div>
   ) : (
     <div className="mobile-menu-collapsed">
       <MenuHeader toggle={toggle} />
       <hr className="rounded" style={{ width: "60%" }} />
-      <SwantjeFurtakHeader menuOff={menuOff} />
+      <div style={{ margin: "30px" }}>
+        <SwantjeFurtakHeader menuOff={menuOff} />
+      </div>
     </div>
   )
 }
@@ -142,14 +148,22 @@ const SubMenu = ({ link, menuPoints, subMenu, setSubMenu }) => {
   }
   return (
     <>
-      <h2 onClick={toggle} style={{ fontWeight: subMenu === link ? 900 : 300 }}>
-        {link}
+      <h2 onClick={toggle}>
+        <Link
+          activeStyle={{ color: "grey" }}
+          to={`/${link}`}
+          partiallyActive={true}
+          onClick={e => e.preventDefault()}
+        >
+          {link}
+        </Link>
       </h2>
       {subMenu === link &&
         menuPoints.map(({ node: { slug, title } }) => (
-          <h2 key={slug} style={{ fontSize: "0.8em" }}>
+          <h2 key={slug} style={{ fontSize: "0.8em", margin: "10px" }}>
             <Link
               activeStyle={{
+                color: "grey",
                 paddingBottom: "2px",
                 borderBottom: "1px solid",
               }}
@@ -159,6 +173,7 @@ const SubMenu = ({ link, menuPoints, subMenu, setSubMenu }) => {
             </Link>
           </h2>
         ))}
+      <b style={{ marginBottom: "50px" }} />
     </>
   )
 }

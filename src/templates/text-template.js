@@ -6,9 +6,10 @@ const TextTemplate = ({ data }) => {
   const post = data.ghostPost
   return (
     <Layout color="#013F31" sub={"texts"}>
-      <div className="container">
+      <div className="scrollable-container">
         <h1>{post.title}</h1>
         <div
+          className="text-post-container"
           style={{ width: "80%" }}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
