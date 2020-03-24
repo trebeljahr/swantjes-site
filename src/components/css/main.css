@@ -133,7 +133,7 @@ a:active {
   margin: 0px;
   font-size: 2em;
   text-transform: uppercase;
-  align-self: end;
+  align-self: center;
   justify-self: center;
 }
 
@@ -253,5 +253,8 @@ hr.rounded {
     justify-content: start;
     margin-top: 0;
     padding-top: 0;
+  }
+  .swantje-furtak-header {
+    align-self: end;
   }
 }
