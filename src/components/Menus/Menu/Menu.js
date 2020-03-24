@@ -39,14 +39,14 @@ const Menu = ({
             setSubMenu={setSubMenu}
           />
         )}
-        <h2 onClick={close}>
+        <h3 onClick={close}>
           <Link
             to="/about"
             activeStyle={{ color: subMenu === "" ? "grey" : "inherit" }}
           >
             about
           </Link>
-        </h2>
+        </h3>
         <hr
           className="rounded"
           style={{ width: "25%", marginBottom: "30px" }}

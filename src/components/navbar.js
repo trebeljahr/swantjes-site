@@ -73,18 +73,18 @@ const DesktopNavbar = ({ data, subMenu, setSubMenu }) => {
             setSubMenu={setSubMenu}
           />
         )}
-        <h2>
+        <h3>
           <Link to="/about" activeStyle={{ color: "grey" }}>
             about
           </Link>
-        </h2>
+        </h3>
       </div>
     </>
   )
 }
 
 export const SwantjeFurtakHeader = ({ menuOff }) => (
-  <h1 className="swantje-furtak-header" onClick={menuOff}>
+  <h3 className="swantje-furtak-header" onClick={menuOff}>
     <Link to="/">swantje furtak</Link>
-  </h1>
+  </h3>
 )

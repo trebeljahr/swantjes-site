@@ -3,7 +3,6 @@ import { useOnClickOutside } from "./hooks"
 import Burger from "./Burger"
 import Menu from "./Menu"
 import FocusLock from "react-focus-lock"
-import { SwantjeFurtakHeader } from "../navbar"
 import { Link } from "gatsby"
 
 function MobileMenu({ color, ...props }) {
@@ -18,12 +17,11 @@ function MobileMenu({ color, ...props }) {
         <FocusLock disabled={!open}>
           <div
             style={{
-              padding: "10px 0px 20px",
+              padding: "20px 20px 0px 0px",
               width: "100vw",
-              paddingTop: "20px",
               display: "flex",
               justifyContent: "flex-end",
-              alignItems: "flex-start",
+              alignItems: "center",
               background: color,
             }}
           >
@@ -33,9 +31,9 @@ function MobileMenu({ color, ...props }) {
               aria-controls={menuId}
               color={color}
             />
-            <h2 style={{ marginRight: "20px" }}>
-              <Link to="/">swantje furtak</Link>
-            </h2>
+            <Link style={{ fontSize: "20px", letterSpacing: "5px" }} to="/">
+              swantje furtak
+            </Link>
           </div>
           <Menu
             open={open}
