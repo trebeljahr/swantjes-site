@@ -1,7 +1,7 @@
 import React from "react"
 import "./css/main.css"
 import Head from "./header"
-import { MobileNavbar, Navbar } from "./navbar"
+import { Navbar } from "./navbar"
 import Media from "react-media"
 import { Link } from "gatsby"
 
@@ -21,13 +21,12 @@ const Layout = ({ children, color, forceMenu = false, filmMenu = false }) => {
                 {matches.small && (
                   <div
                     className="mobile-container"
-                    style={{ backgroundColor: color }}
+                    style={{
+                      color: color === "white" ? "black" : "white",
+                      backgroundColor: color,
+                    }}
                   >
-                    <MobileNavbar
-                      color={color}
-                      forceMenu={forceMenu}
-                      filmMenu={filmMenu}
-                    />
+                    <Navbar desktop={false} />
                     <Head />
                     {children}
                   </div>
@@ -40,7 +39,7 @@ const Layout = ({ children, color, forceMenu = false, filmMenu = false }) => {
                       backgroundColor: color,
                     }}
                   >
-                    <Navbar filmMenu={filmMenu} color={color} />
+                    <Navbar color={color} desktop={true} />
                     <Head />
                     {children}
                     <div

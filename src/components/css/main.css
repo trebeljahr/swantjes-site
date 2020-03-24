@@ -2,6 +2,7 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 .navbar-mobile > * {
@@ -14,6 +15,7 @@ body {
   height: 100vh;
   display: flex;
   background-color: white;
+  color: black;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -53,12 +55,13 @@ video {
   .desktop-container {
     display: grid;
     grid-template-rows: 9fr 1fr;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 30vw auto 5vw;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     justify-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 }
 body {
@@ -90,11 +93,15 @@ a:active {
 }
 
 .desktop-navbar {
+  width: 30vw;
   height: 90vh;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  top: 0;
+  left: 0;
 }
 
 .desktop-navbar > * {
@@ -115,4 +122,23 @@ a:active {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.menu-header {
+  cursor: pointer;
+  padding: 10px 40px;
+  letter-spacing: 3px;
+}
+
+.swantje-furtak-header {
+  margin-top: 20px;
+  letter-spacing: 5px;
+}
+
+.mobile-menu-collapsed {
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-transform: lowercase;
 }
