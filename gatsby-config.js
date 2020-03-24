@@ -14,6 +14,7 @@ module.exports = {
         contentApiKey: process.env.GHOST_CONTENT_API_KEY,
       },
     },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

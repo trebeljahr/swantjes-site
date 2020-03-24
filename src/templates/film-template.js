@@ -67,22 +67,23 @@ class FilmTemplate extends Component {
     return (
       <Layout color="#1f2839" sub={"films"}>
         <div className="film-numbers">
-          {this.state.things.map(thing => (
-            <div key={thing.id}>
+          {this.state.things.map(({ id }) => (
+            <div key={id}>
               <a
-                href={`#${thing.id}`}
+                href={`#${id === "0" ? "title" : id}`}
                 style={{
-                  color:
-                    thing.id === this.state.activeThing.id ? "grey" : "inherit",
+                  color: id === this.state.activeThing.id ? "grey" : "inherit",
                 }}
               >
-                {parseInt(thing.id) + 1}
+                {parseInt(id) + 1}
               </a>
             </div>
           ))}
         </div>
         <div className="scrollable-container film-container" ref={this.rootRef}>
-          <h1 style={{ marginTop: 0 }}>{this.props.data.ghostPost.title}</h1>
+          <h1 style={{ marginTop: 0 }} id="title">
+            {this.props.data.ghostPost.title}
+          </h1>
           {this.state.things.map(({ film, text, id }) => (
             <div
               ref={this.singleRefs[id].ref}

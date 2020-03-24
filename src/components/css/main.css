@@ -9,12 +9,8 @@ body {
   text-transform: lowercase;
 }
 .navbar-mobile {
-  position: fixed;
   z-index: 10000;
-  width: 100%;
-  height: 100vh;
   display: flex;
-  background-color: white;
   color: black;
   flex-direction: column;
   justify-content: flex-start;
@@ -30,7 +26,7 @@ body {
 }
 
 video {
-  width: 90%;
+  width: 100%;
 }
 
 .mobile-container {
@@ -139,8 +135,10 @@ a:active {
 .mobile-menu-collapsed {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row-reverse;
   text-transform: lowercase;
+  font-size: 0.8em;
 }
 
 .film-container {
@@ -154,18 +152,20 @@ a:active {
   align-self: center;
   justify-self: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  margin-top: 40px;
+  width: 100vw;
   height: 100%;
   grid-column: 2;
   grid-row: 2;
 }
 .scrollable-container {
+  width: 90%;
   justify-content: flex-start;
   align-items: center;
   overflow-y: scroll;
-  margin-top: 40px;
+  margin-top: 20px;
   padding-bottom: 20px;
 }
 .scrollable-container::-webkit-scrollbar,
@@ -191,14 +191,14 @@ hr.rounded {
 }
 
 .film-numbers {
-  grid-row: 1;
-  grid-column: 2;
-  align-self: center;
-  width: 50%;
-  justify-self: center;
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  font-size: 2em;
+  justify-content: flex-end;
+  font-size: 1.5em;
+  margin-right: 20px;
+}
+.film-numbers > * {
+  margin: 0 10px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -217,8 +217,28 @@ hr.rounded {
     align-items: start;
     justify-items: center;
   }
+  .film-numbers {
+    grid-row: 1;
+    grid-column: 2;
+    align-self: center;
+    width: 50%;
+    justify-self: center;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2em;
+    margin-right: 0;
+  }
+  .film-numbers > * {
+    margin: 0;
+  }
   .mobile-container {
     display: none;
+  }
+  .container {
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
   }
   .scrollable-container {
     margin-top: 0;

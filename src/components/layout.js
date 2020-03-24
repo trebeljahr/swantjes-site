@@ -2,12 +2,16 @@ import React from "react"
 import Head from "./header"
 import Media from "react-media"
 import { Navbar } from "./navbar"
+import { ThemeProvider } from "styled-components"
+import { GlobalStyles } from "../global"
+import { theme } from "../theme"
 import "./css/main.css"
 
 const Layout = ({ children, color, sub }) => {
   if (typeof window !== `undefined`) {
     return (
-      <>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
         <Media
           queries={{
             mobile: "(max-width: 800px)",
@@ -34,7 +38,7 @@ const Layout = ({ children, color, sub }) => {
             )
           }}
         </Media>
-      </>
+      </ThemeProvider>
     )
   }
   return null
