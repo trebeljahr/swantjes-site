@@ -7,15 +7,15 @@ import { GlobalStyles } from "../global"
 import { theme } from "../theme"
 import "./css/main.css"
 
-const Layout = ({ children, color, sub }) => {
+const Layout = ({ children, color, sub, site }) => {
   if (typeof window !== `undefined`) {
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Media
           queries={{
-            mobile: "(max-width: 800px)",
-            desktop: "(min-width: 801px)",
+            mobile: `(max-width: ${theme.mobile})`,
+            desktop: `(min-width: ${theme.mobile})`,
           }}
         >
           {matches => {
@@ -31,7 +31,12 @@ const Layout = ({ children, color, sub }) => {
                     backgroundColor: color,
                   }}
                 >
-                  <Navbar color={color} desktop={matches.desktop} sub={sub} />
+                  <Navbar
+                    color={color}
+                    desktop={matches.desktop}
+                    sub={sub}
+                    site={site}
+                  />
                   {children}
                 </div>
               </>

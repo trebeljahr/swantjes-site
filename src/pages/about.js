@@ -4,7 +4,7 @@ import aboutAnimation from "../images/about_small.mp4"
 
 const About = () => {
   return (
-    <Layout color="#4f2223">
+    <Layout color="#4f2223" site="about">
       <div className="container">
         <video autoPlay="autoplay" muted loop src={aboutAnimation}></video>
       </div>

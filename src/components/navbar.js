@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 import MobileMenu from "./Menus/MobileMenu"
 import { SubMenu } from "./Menus/Submenu"
 
-export function Navbar({ desktop = false, color, sub = "" }) {
+export function Navbar({ desktop = false, color, sub = "", site }) {
   const [subMenu, setSubMenu] = useState(sub)
   return (
     <StaticQuery
@@ -52,10 +52,10 @@ export function Navbar({ desktop = false, color, sub = "" }) {
   )
 }
 
-const DesktopNavbar = ({ data, subMenu, setSubMenu }) => {
+const DesktopNavbar = ({ data, subMenu, setSubMenu, site }) => {
   return (
     <>
-      <SwantjeFurtakHeader />
+      <SwantjeFurtakHeader site={site} />
       <div className="navbar-desktop">
         {data.films && (
           <SubMenu
@@ -83,8 +83,15 @@ const DesktopNavbar = ({ data, subMenu, setSubMenu }) => {
   )
 }
 
-export const SwantjeFurtakHeader = ({ menuOff }) => (
-  <h3 className="swantje-furtak-header" onClick={menuOff}>
-    <Link to="/">swantje furtak</Link>
+export const SwantjeFurtakHeader = ({ menuOff, site = "" }) => (
+  <h3
+    className="swantje-furtak-header"
+    //style={{ gridColumn: site === "about" || site === "home" ? 2 : 1 }}
+    onClick={menuOff}
+  >
+    <Link to="/">
+      swantje <br />
+      furtak
+    </Link>
   </h3>
 )

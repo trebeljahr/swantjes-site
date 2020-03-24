@@ -49,9 +49,13 @@ video::-webkit-media-controls-start-playback-button {
   display: none;
   pointer-events: none;
 }
-h2 {
-  font-weight: 400;
-  margin: 0 50px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 300;
+  margin: 10px;
 }
 
 a {
@@ -78,7 +82,7 @@ a:active {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   font-size: 1.4em;
 }
@@ -99,7 +103,7 @@ a:active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20vh;
+  margin-bottom: 10vw;
   width: 100%;
 }
 
@@ -120,14 +124,16 @@ a:active {
 }
 
 .swantje-furtak-header {
-  letter-spacing: 8px;
+  /*letter-spacing: 8px;*/
   text-align: center;
-  font-weight: 100;
-  font-size: 0.8;
-  grid-row: 3;
-  grid-column: 2;
+  font-weight: 300;
+  font-size: 1;
+  grid-row: 1;
+  grid-column: 1;
   margin: 0px;
-  align-self: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  align-self: end;
   justify-self: center;
 }
 
@@ -201,7 +207,7 @@ hr.rounded {
   margin: 0 10px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   video {
     max-height: 80vh;
     max-width: 90%;
@@ -220,7 +226,7 @@ hr.rounded {
   .film-numbers {
     grid-row: 1;
     grid-column: 2;
-    align-self: center;
+    align-self: end;
     width: 50%;
     justify-self: center;
     display: flex;
@@ -235,9 +241,10 @@ hr.rounded {
     display: none;
   }
   .container {
+    justify-self: start;
     width: 100%;
     margin: 0;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   }
   .scrollable-container {

@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 
 const Home = () => {
   return (
-    <Layout color="white">
+    <Layout color="white" site="home">
       <div className="container">
         <video autoPlay="autoplay" muted loop src={mainAnimation}></video>
       </div>
