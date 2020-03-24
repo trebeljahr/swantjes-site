@@ -133,8 +133,9 @@ a:active {
   margin: 0px;
   font-size: 2em;
   text-transform: uppercase;
-  align-self: end;
+  align-self: center;
   justify-self: center;
+  margin-bottom: 20px;
 }
 
 .mobile-menu-collapsed {

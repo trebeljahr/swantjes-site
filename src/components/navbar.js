@@ -55,8 +55,8 @@ export function Navbar({ desktop = false, color, sub = "", site }) {
 const DesktopNavbar = ({ data, subMenu, setSubMenu, site }) => {
   return (
     <>
-      <SwantjeFurtakHeader site={site} />
       <div className="navbar-desktop">
+        <SwantjeFurtakHeader site={site} />
         {data.films && (
           <SubMenu
             link="films"
