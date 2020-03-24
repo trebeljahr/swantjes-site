@@ -4,8 +4,17 @@ import { graphql } from "gatsby"
 
 const FilmTemplate = ({ data }) => {
   const post = data.ghostPost
-  const regexp = new RegExp("<iframe.*</iframe>")
-  const [iframe] = post.html.match(regexp)
+  const filmRegex = new RegExp("<iframe.*?</iframe>", "g")
+  const textRegex = new RegExp("<p>.*?</p>", "g")
+
+  const films = post.html.match(filmRegex)
+  const texts = post.html.match(textRegex)
+
+  console.log(post.html)
+  console.log(films)
+  console.log(texts)
+
+  var posts = films.map((film, i) => ({ film, text: texts[i] }))
   return (
     <Layout color="#1f2839" filmMenu={true}>
       <div
@@ -16,13 +25,19 @@ const FilmTemplate = ({ data }) => {
           alignItems: "center",
           color: "white",
           width: "100%",
+          gridColumn: 2,
         }}
       >
         <h1>{post.title}</h1>
-        <div
-          className="iframe-container"
-          dangerouslySetInnerHTML={{ __html: iframe }}
-        />
+        {posts.map(post => (
+          <>
+            <div
+              className="iframe-container"
+              dangerouslySetInnerHTML={{ __html: post.film }}
+            />
+            <div dangerouslySetInnerHTML={{ __html: post.text }} />
+          </>
+        ))}
       </div>
     </Layout>
   )
