@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <Layout color="white" site="home">
       <div className="container">
-        <video autoPlay="autoplay" muted loop>
+        <video autoPlay="autoplay" muted loop playsinline poster={mainFrame}>
           <source src={mainAnimation} />
           <img src={mainFrame} alt="A still frame while video loads" />
         </video>

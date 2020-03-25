@@ -99,20 +99,29 @@ a:active {
 .mobile-container::-webkit-scrollbar {
   display: none;
 }
+.social-media-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .social-media-bar > a {
   height: fit-content;
   width: fit-content;
 }
 .social-media-bar > a > img {
+  width: auto;
   height: 30px;
-  width: 30px;
-  margin: 10px;
-  margin-right: 0px;
+  margin: 10px 15px;
 }
-#youtube-icon {
-  height: 38px;
-  width: 38px;
-  margin-bottom: 6px;
+#about-video {
+  margin-top: 40px;
+}
+#about-heading {
+  font-size: 2em;
+  margin-top: 40px;
+}
+#about-text {
+  width: 90%;
 }
 .scrollable-container,
 mobile-container {
@@ -195,18 +204,12 @@ mobile-container {
     margin-top: 0;
     padding-top: 0;
   }
+  .about-container {
+    grid-row: 1/4;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
   .swantje-furtak-header {
     align-self: end;
-  }
-  .social-media-bar > a > img {
-    height: 50px;
-    width: 50px;
-    margin: 10px;
-    margin-right: 0px;
-  }
-  #youtube-icon {
-    height: 58px;
-    width: 58px;
-    margin-bottom: 6px;
   }
 }
