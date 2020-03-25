@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
-import aboutAnimation from "../images/about_small.mp4"
-import instaIcon from "../images/instagram.svg"
-import youtubeIcon from "../images/youtube.svg"
+import aboutAnimation from "../assets/videos/about_small.mp4"
+import instaIcon from "../assets/images/instagram.svg"
+import youtubeIcon from "../assets/images/youtube.svg"
 
 const About = () => {
   return (

@@ -10,7 +10,7 @@ export const SubMenu = ({ link, menuPoints, subMenu, setSubMenu }) => {
       <h3 onClick={toggle}>
         <Link
           activeStyle={{ color: "grey" }}
-          to={`/${link}`}
+          to={`/${link}/${menuPoints[0].node.slug}`}
           partiallyActive={true}
           onClick={e => e.preventDefault()}
         >
