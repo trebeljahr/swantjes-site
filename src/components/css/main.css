@@ -113,6 +113,15 @@ a:active {
   height: 30px;
   margin: 10px 15px;
 }
+.video-container {
+  max-height: 80%;
+  width: 100%;
+}
+.spinner-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 #about-video {
   margin-top: 40px;
 }
@@ -176,7 +185,7 @@ p {
 
 @media only screen and (min-width: 800px) {
   video {
-    max-height: 80%;
+    max-height: 90%;
     max-width: 100%;
     width: auto;
   }

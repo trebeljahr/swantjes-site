@@ -1,19 +1,30 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
 import aboutAnimation from "../assets/videos/about_small.mp4"
 import aboutFrame from "../assets/videos/about.jpg"
 import instaIcon from "../assets/images/instagram.png"
 import youtubeIcon from "../assets/images/youtube.png"
+import Loader from "react-spinners/BounceLoader"
 
 const About = () => {
+  const [loading, setLoading] = useState(true)
   return (
     <Layout color="#4f2223" site="about">
       <div className="container about-container">
-        <video id="about-video" autoPlay="autoplay" muted loop playsinline>
-          <source src={aboutAnimation} />
-          <img src={aboutFrame} alt="A still frame while video loads" />
-        </video>
-
+        <div className="video-container">
+          <Loader loading={loading} />
+          <video
+            id="about-video"
+            autoPlay="autoplay"
+            muted
+            loop
+            playsInline
+            onLoad={() => setLoading(false)}
+          >
+            <source src={aboutAnimation} />
+            <img src={aboutFrame} alt="A still frame while video loads" />
+          </video>
+        </div>
         <h2 id="about-heading">about</h2>
         <p id="about-text">
           Hi I am Swantje Furtak and this is some placeholder text that will
