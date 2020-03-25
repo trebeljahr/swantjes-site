@@ -49,9 +49,9 @@ const Menu = ({
         </h3>
         <hr
           className="rounded"
-          style={{ width: "25%", marginBottom: "30px" }}
+          style={{ width: "50%", marginBottom: "30px" }}
         />
-        <SwantjeFurtakHeader />
+        <SwantjeFurtakHeader close={close} spread={false} />
       </div>
     </StyledMenu>
   )

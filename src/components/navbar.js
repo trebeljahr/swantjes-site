@@ -55,7 +55,7 @@ export function Navbar({ desktop = false, color, sub = "", site }) {
 const DesktopNavbar = ({ data, subMenu, setSubMenu, site }) => {
   return (
     <>
-      <SwantjeFurtakHeader site={site} />
+      <SwantjeFurtakHeader />
       <div className="navbar-desktop">
         {data.films && (
           <SubMenu
@@ -83,15 +83,8 @@ const DesktopNavbar = ({ data, subMenu, setSubMenu, site }) => {
   )
 }
 
-export const SwantjeFurtakHeader = ({ menuOff, site = "" }) => (
-  <h3
-    className="swantje-furtak-header"
-    //style={{ gridColumn: site === "about" || site === "home" ? 2 : 1 }}
-    onClick={menuOff}
-  >
-    <Link to="/">
-      swantje <br />
-      furtak
-    </Link>
+export const SwantjeFurtakHeader = ({ close, spread = true }) => (
+  <h3 className="swantje-furtak-header" onClick={close}>
+    <Link to="/">swantje {spread ? <br /> : null}furtak</Link>
   </h3>
 )

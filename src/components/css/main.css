@@ -161,7 +161,7 @@ mobile-container {
 }
 
 hr.rounded {
-  border-top: 2px solid;
+  border-top: 1px solid;
   border-radius: 5px;
 }
 
@@ -173,11 +173,12 @@ hr.rounded {
 }
 
 .film-numbers {
-  width: 100%;
+  display: none;
+  /* width: 100%;
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
-  margin-right: 30px;
+  margin-right: 30px; */
 }
 .film-numbers > * {
   margin: 0 10px;
