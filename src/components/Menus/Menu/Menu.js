@@ -22,7 +22,7 @@ const Menu = ({
   }
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-      <div className="navbar-mobile" tabIndex={tabIndex}>
+      <div className="mobile-menu" tabIndex={tabIndex}>
         {data.films && (
           <SubMenu
             link="films"
@@ -47,7 +47,7 @@ const Menu = ({
             about
           </Link>
         </h3>
-        <hr style={{ width: "50%", marginBottom: "30px" }} />
+        <hr className="mobile-menu-divider-line" />
         <SwantjeFurtakHeader close={close} spread={false} />
       </div>
     </StyledMenu>

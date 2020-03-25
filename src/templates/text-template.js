@@ -10,7 +10,6 @@ const TextTemplate = ({ data }) => {
         <h1>{post.title}</h1>
         <div
           className="text-post-container"
-          style={{ width: "80%" }}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>

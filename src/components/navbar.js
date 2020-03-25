@@ -56,7 +56,7 @@ const DesktopNavbar = ({ data, subMenu, setSubMenu, site }) => {
   return (
     <>
       <SwantjeFurtakHeader />
-      <div className="navbar-desktop">
+      <div className="desktop-menu">
         {data.films && (
           <SubMenu
             link="films"

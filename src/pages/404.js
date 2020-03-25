@@ -6,7 +6,7 @@ const ErrorPage = () => {
     <Layout color="white">
       <div className="container">
         <h1>404 Oh no. </h1>
-        <p style={{ textAlign: "center" }}>
+        <p>
           Something went wrong. <br /> Maybe try another page huh?
         </p>
       </div>

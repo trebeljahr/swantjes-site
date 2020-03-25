@@ -6,6 +6,8 @@ import { ThemeProvider } from "styled-components"
 import { GlobalStyles } from "../global"
 import { theme } from "../theme"
 import "./css/main.css"
+import "./css/desktop.css"
+import "./css/mobile.css"
 
 const Layout = ({ children, color, sub, site }) => {
   if (typeof window !== `undefined`) {

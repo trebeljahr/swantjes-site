@@ -9,23 +9,14 @@ function MobileMenu({ color, ...props }) {
 
   return (
     <>
-      <div
-        style={{
-          padding: "20px 20px 0px 0px",
-          width: "100vw",
-          display: "flex",
-          justifyContent: "flex-end",
-          alignItems: "center",
-          background: color,
-        }}
-      >
+      <div className="mobile-navbar">
         <Burger
           open={open}
           setOpen={setOpen}
           aria-controls={menuId}
           color={color}
         />
-        <Link style={{ fontSize: "20px", letterSpacing: "5px" }} to="/">
+        <Link className="mobile-swantje-header" to="/">
           swantje furtak
         </Link>
       </div>

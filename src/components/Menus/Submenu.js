@@ -26,7 +26,7 @@ export const SubMenu = ({ link, menuPoints, subMenu, setSubMenu }) => {
                 paddingBottom: "2px",
                 borderBottom: "1px solid",
               }}
-              style={{ fontSize: "0.6em", textTransform: "lowercase" }}
+              className="sub-menu-link"
               to={`/${link}/${slug}`}
             >
               {title}

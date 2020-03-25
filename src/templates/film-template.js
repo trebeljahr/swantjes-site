@@ -81,13 +81,12 @@ class FilmTemplate extends Component {
           ))}
         </div>
         <div className="scrollable-container film-container" ref={this.rootRef}>
-          <h1 style={{ marginTop: 0 }} id="title">
-            {this.props.data.ghostPost.title}
-          </h1>
+          <h1 id="title">{this.props.data.ghostPost.title}</h1>
           {this.state.things.map(({ film, text, id }) => (
             <div
               ref={this.singleRefs[id].ref}
               id={id}
+              key={id}
               className="single-film-container"
             >
               <div
