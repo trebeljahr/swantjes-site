@@ -99,7 +99,21 @@ a:active {
 .mobile-container::-webkit-scrollbar {
   display: none;
 }
-
+.social-media-bar > a {
+  height: fit-content;
+  width: fit-content;
+}
+.social-media-bar > a > img {
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  margin-right: 0px;
+}
+#youtube-icon {
+  height: 38px;
+  width: 38px;
+  margin-bottom: 6px;
+}
 .scrollable-container,
 mobile-container {
   -ms-overflow-style: none;
@@ -146,10 +160,10 @@ mobile-container {
   padding-bottom: 20px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   video {
-    max-height: 80vh;
-    max-width: 90%;
+    max-height: 80%;
+    max-width: 100%;
     width: auto;
   }
   .film-numbers {
@@ -183,5 +197,16 @@ mobile-container {
   }
   .swantje-furtak-header {
     align-self: end;
+  }
+  .social-media-bar > a > img {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    margin-right: 0px;
+  }
+  #youtube-icon {
+    height: 58px;
+    width: 58px;
+    margin-bottom: 6px;
   }
 }
