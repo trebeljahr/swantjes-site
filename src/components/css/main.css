@@ -4,9 +4,6 @@ body {
   overflow: hidden;
 }
 
-.navbar-mobile > * {
-  text-transform: lowercase;
-}
 .navbar-mobile {
   z-index: 10000;
   display: flex;
@@ -14,11 +11,12 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  text-transform: lowercase;
 }
-.navbar-mobile > h2 {
-  margin: 15px 0px;
-  cursor: pointer;
+.navbar-mobile > h3 {
+  font-size: 1.5em;
 }
+
 .navbar-desktop > h2 {
   cursor: pointer;
   font-style: italic;
