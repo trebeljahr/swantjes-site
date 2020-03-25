@@ -81,7 +81,7 @@ a:visited {
   color: inherit;
 }
 a:hover {
-  color: inherit;
+  color: grey;
 }
 a:active {
   color: inherit;
@@ -158,11 +158,6 @@ a:active {
 .scrollable-container,
 mobile-container {
   -ms-overflow-style: none;
-}
-
-hr.rounded {
-  border-top: 1px solid;
-  border-radius: 5px;
 }
 
 .text-post-container {

@@ -47,10 +47,7 @@ const Menu = ({
             about
           </Link>
         </h3>
-        <hr
-          className="rounded"
-          style={{ width: "50%", marginBottom: "30px" }}
-        />
+        <hr style={{ width: "50%", marginBottom: "30px" }} />
         <SwantjeFurtakHeader close={close} spread={false} />
       </div>
     </StyledMenu>
