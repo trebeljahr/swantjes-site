@@ -12,7 +12,7 @@ const About = () => {
     <Layout color="#4f2223" site="about">
       <div className="container about-container">
         <div className="video-container">
-          <Loader loading={loading} />
+          <Loader loading={loading} color="white" />
           <video
             id="about-video"
             autoPlay="autoplay"

@@ -52,7 +52,7 @@ export function Navbar({ desktop = false, color, sub = "", site }) {
   )
 }
 
-const DesktopNavbar = ({ data, subMenu, setSubMenu, site }) => {
+const DesktopNavbar = ({ data, subMenu, setSubMenu }) => {
   return (
     <>
       <SwantjeFurtakHeader />
