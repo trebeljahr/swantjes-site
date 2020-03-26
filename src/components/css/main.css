@@ -96,7 +96,8 @@ a:active {
   grid-column: 2;
 }
 .scrollable-container::-webkit-scrollbar,
-.mobile-container::-webkit-scrollbar {
+.mobile-container::-webkit-scrollbar,
+.container::-webkit-scrollbar {
   display: none;
 }
 .social-media-bar {
@@ -137,7 +138,8 @@ a:active {
   text-align: center;
 }
 .scrollable-container,
-mobile-container {
+.mobile-container,
+.container {
   -ms-overflow-style: none;
 }
 
