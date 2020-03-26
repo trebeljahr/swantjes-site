@@ -33,15 +33,14 @@ const About = () => {
         </div>
         <h2 id="about-heading">about</h2>
         <p id="about-text">
-          Hi I am Swantje Furtak and this is some placeholder text that will
-          describe who I am and what I am doing. I like drawing, writing, films,
-          biochemistry, journalism and... social media?
+          Twenty-year-old girl, dreaming of becoming a documentary filmmaker and
+          perceptive storyteller.
         </p>
         <div className="social-media-bar">
-          <a href="https://www.instagram.com">
+          <a href="https://www.instagram.com/swantjes_notebooks/">
             <img src={instaIcon} alt="instagram-icon" />
           </a>
-          <a href="https://youtube.com">
+          <a href="https://www.youtube.com/channel/UCuVNWp3ieYTkTTQrxPlBnpw">
             <img src={youtubeIcon} alt="youtube-icon" id="youtube-icon" />
           </a>
         </div>

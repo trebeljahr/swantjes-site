@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import mainAnimation from "../assets/videos/main_small.mp4"
 import mainFrame from "../assets/videos/main.jpg"
+import notes from "../assets/images/notes.jpeg"
 import Layout from "../components/layout"
 import { Loader } from "../components/Loader"
 
@@ -27,6 +28,7 @@ const Home = () => {
             />
             You can not display the video.
           </video>
+          <img className="notes" src={notes} alt="a glance in my notebooks" />
         </div>
       </div>
     </Layout>

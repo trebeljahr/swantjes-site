@@ -186,11 +186,17 @@ p {
   font-size: 1.2rem;
 }
 
+.notes {
+  width: 90%;
+}
 @media only screen and (min-width: 800px) {
   video {
     max-height: 90%;
     max-width: 100%;
     width: auto;
+  }
+  .notes {
+    display: none;
   }
   .film-numbers {
     grid-row: 1;
