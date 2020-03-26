@@ -29,9 +29,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
-  if (result.data.films) {
-    const items = result.data.films.edges
-    items.forEach(({ node }) => {
+  if (result.data && result.data.films && result.data.films.edges) {
+    result.data.films.edges.forEach(({ node }) => {
       node.url = `/films/${node.slug}/`
       actions.createPage({
         path: node.url,
@@ -42,9 +41,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
-  if (result.data.texts) {
-    const items = result.data.texts.edges
-    items.forEach(({ node }) => {
+  if (result.data && result.data.texts && result.data.films.edges) {
+    result.data.texts.edges.forEach(({ node }) => {
       node.url = `/texts/${node.slug}/`
       actions.createPage({
         path: node.url,

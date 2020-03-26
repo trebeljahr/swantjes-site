@@ -32,8 +32,11 @@ export function Navbar({ desktop = false, color, sub = "", site }) {
           }
         }
       `}
-      render={data =>
-        desktop ? (
+      render={data => {
+        if (!data) {
+          return null
+        }
+        return desktop ? (
           <DesktopNavbar
             data={data}
             subMenu={subMenu}
@@ -47,7 +50,7 @@ export function Navbar({ desktop = false, color, sub = "", site }) {
             setSubMenu={setSubMenu}
           />
         )
-      }
+      }}
     ></StaticQuery>
   )
 }

@@ -1,9 +1,13 @@
 import React from "react"
 import Link from "gatsby-link"
 
-export const SubMenu = ({ link, menuPoints, subMenu, setSubMenu }) => {
+export const SubMenu = ({ link, menuPoints = [], subMenu, setSubMenu }) => {
   const toggle = () => {
     setSubMenu(old => (old !== link ? link : ""))
+  }
+  console.log(menuPoints)
+  if (menuPoints.length === 0) {
+    return null
   }
   return (
     <>
