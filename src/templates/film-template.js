@@ -1,6 +1,7 @@
 import React, { createRef, Component } from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
+import { Loader } from "../components/Loader"
 
 class FilmTemplate extends Component {
   constructor(props) {
@@ -8,7 +9,12 @@ class FilmTemplate extends Component {
     const post = this.props.data.ghostPost
     const filmRegex = new RegExp("<iframe.*?</iframe>", "g")
     const textRegex = new RegExp("<p>.*?</p>", "g")
-    const films = post.html.match(filmRegex)
+    const films = post.html
+      .match(filmRegex)
+      .map(
+        (html, index) =>
+          html.substring(0, 7) + ` id=film-${index}` + html.substring(7)
+      )
     const texts = post.html.match(textRegex)
     this.state = {
       post,
@@ -18,6 +24,9 @@ class FilmTemplate extends Component {
         id: "" + i,
       })),
       activeThing: { id: null, ratio: 0 },
+      loading: films.reduce((acc, _, i) => {
+        return { ...acc, [`film-${i}`]: true }
+      }, {}),
     }
 
     this.rootRef = React.createRef()
@@ -60,6 +69,11 @@ class FilmTemplate extends Component {
       Object.values(this.singleRefs).forEach(value =>
         this.observer.observe(value.ref.current)
       )
+      Object.keys(this.state.loading).forEach(id => {
+        document.getElementById(id).onload = () => {
+          this.setState({ loading: { [id]: false } })
+        }
+      })
     }
   }
 
@@ -89,8 +103,12 @@ class FilmTemplate extends Component {
               key={id}
               className="single-film-container"
             >
+              <Loader loading={this.state.loading[`film-${id}`]} color="grey" />
               <div
                 className="iframe-container"
+                style={{
+                  display: this.state.loading[`film-${id}`] ? "none" : "inline",
+                }}
                 dangerouslySetInnerHTML={{ __html: film }}
               />
               <div

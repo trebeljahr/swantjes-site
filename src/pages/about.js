@@ -4,7 +4,7 @@ import aboutAnimation from "../assets/videos/about_small.mp4"
 import aboutFrame from "../assets/videos/about.jpg"
 import instaIcon from "../assets/images/instagram.png"
 import youtubeIcon from "../assets/images/youtube.png"
-import Loader from "react-spinners/BounceLoader"
+import { Loader } from "../components/Loader"
 
 const About = () => {
   const [loading, setLoading] = useState(true)
@@ -14,15 +14,21 @@ const About = () => {
         <div className="video-container">
           <Loader loading={loading} color="white" />
           <video
+            style={{ display: loading ? "none" : "inline" }}
             id="about-video"
             autoPlay="autoplay"
             muted
             loop
             playsInline
+            poster={aboutFrame}
             onLoad={() => setLoading(false)}
           >
             <source src={aboutAnimation} />
-            <img src={aboutFrame} alt="A still frame while video loads" />
+            <img
+              src={aboutFrame}
+              alt="A still frame in case there is no video"
+            />
+            You can not display the video.
           </video>
         </div>
         <h2 id="about-heading">about</h2>

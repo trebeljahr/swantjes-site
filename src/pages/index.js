@@ -2,16 +2,17 @@ import React, { useState } from "react"
 import mainAnimation from "../assets/videos/main_small.mp4"
 import mainFrame from "../assets/videos/main.jpg"
 import Layout from "../components/layout"
-import Loader from "react-spinners/BounceLoader"
+import { Loader } from "../components/Loader"
 
 const Home = () => {
   const [loading, setLoading] = useState(true)
   return (
     <Layout color="white" site="home">
       <div className="container">
-        <Loader loading={loading} color="grey" />
         <div className="video-container">
+          <Loader loading={loading} color="grey" />
           <video
+            style={{ display: loading ? "none" : "inline" }}
             autoPlay="autoplay"
             muted
             loop
@@ -20,7 +21,11 @@ const Home = () => {
             onLoad={() => setLoading(false)}
           >
             <source src={mainAnimation} />
-            <img src={mainFrame} alt="A still frame while video loads" />
+            <img
+              src={mainFrame}
+              alt="A still frame in case there is no video"
+            />
+            You can not display the video.
           </video>
         </div>
       </div>
