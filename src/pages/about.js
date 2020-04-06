@@ -37,7 +37,7 @@ const About = () => {
           perceptive storyteller.
         </p>
         <div className="social-media-bar">
-          <a href="https://www.instagram.com/swantjes_notebooks/">
+          <a href="https://www.instagram.com/swantjefurtak/">
             <img src={instaIcon} alt="instagram-icon" />
           </a>
           <a href="https://www.youtube.com/channel/UCuVNWp3ieYTkTTQrxPlBnpw">
