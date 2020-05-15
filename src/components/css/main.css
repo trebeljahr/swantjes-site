@@ -58,6 +58,7 @@ a:active {
   align-items: center;
   margin-bottom: 10vw;
   width: 100%;
+  min-height: min-content;
 }
 
 .iframe-container > iframe {
@@ -183,6 +184,7 @@ a:active {
   overflow-y: scroll;
   padding-top: 20px;
   padding-bottom: 20px;
+  height: 100vh;
 }
 p {
   font-size: 1.2rem;
