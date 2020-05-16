@@ -6,57 +6,56 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 const FilmTemplate = ({ data }) => {
   const rootRef = useRef(null)
   const [post] = useState(data.ghostPost)
-  const [parser] = useState(new DOMParser())
-  const [firstParse] = useState(parser.parseFromString(post.html, "text/html"))
-  const [body] = useState(firstParse.getElementsByTagName("body"))
-  const [filmsCardHTML] = useState(firstParse.getElementsByTagName("figure"))
-  const [filmsHTML] = useState(firstParse.getElementsByTagName("iframe"))
-  const [options] = useState({
-    root: document.querySelector("#scrollArea"),
-    rootMargin: "0px",
-    threshold: 1,
-  })
+  const [films, setFilms] = useState([])
   const [activeElem, setActiveElem] = useState("film-0")
   const callback = entries => {
     if (entries[0].isIntersecting) {
       setActiveElem(entries[0].target.id)
     }
   }
-  const [observer] = useState(new IntersectionObserver(callback, options))
-
-  let filmsCards = []
-  for (let i = 0; i < filmsCardHTML.length; i++) {
-    filmsCardHTML[i].setAttribute("id", `film-${i}`)
-    filmsCardHTML[i].classList.add("iframe-container")
-    filmsCards = [...filmsCards, filmsCardHTML[i]]
-    observer.observe(filmsCardHTML[i])
-  }
-
-  for (let i = 0; i < filmsHTML.length; i++) {
-    filmsHTML[i].classList.add("single-film-container")
-    filmsHTML[i].removeAttribute("width")
-    filmsHTML[i].removeAttribute("height")
-  }
-  const [films] = useState(filmsCards)
 
   useEffect(() => {
-    let rawElements = body[0].children
-    let elements = []
+    if (window !== undefined) {
+      const options = {
+        root: rootRef.current,
+        rootMargin: "0px",
+        threshold: 1,
+      }
+      const observer = new IntersectionObserver(callback, options)
+      const parser = new DOMParser()
+      const firstParse = parser.parseFromString(post.html, "text/html")
+      const body = firstParse.getElementsByTagName("body")
+      const filmsCardHTML = firstParse.getElementsByTagName("figure")
+      const filmsHTML = firstParse.getElementsByTagName("iframe")
+      let filmsCards = []
 
-    for (let i = 0; i < rawElements.length; i++) {
-      elements.push(rawElements[i])
+      for (let i = 0; i < filmsCardHTML.length; i++) {
+        filmsCardHTML[i].setAttribute("id", `film-${i}`)
+        filmsCardHTML[i].classList.add("iframe-container")
+        filmsCards = [...filmsCards, filmsCardHTML[i]]
+      }
+      setFilms(filmsCards)
+      for (let i = 0; i < filmsHTML.length; i++) {
+        filmsHTML[i].classList.add("single-film-container")
+        filmsHTML[i].removeAttribute("width")
+        filmsHTML[i].removeAttribute("height")
+      }
+
+      let rawElements = body[0].children
+      let elements = []
+
+      for (let i = 0; i < rawElements.length; i++) {
+        elements.push(rawElements[i])
+      }
+      elements.forEach(elem => {
+        rootRef.current.appendChild(elem)
+      })
+      observer.observe(rootRef.current)
+      filmsCards.forEach(card => {
+        observer.observe(card)
+      })
     }
-    elements.forEach(elem => {
-      rootRef.current.appendChild(elem)
-    })
-  }, [body])
-
-  useEffect(() => {
-    observer.observe(rootRef.current)
-    filmsCards.forEach(card => {
-      observer.observe(card)
-    })
-  }, [observer, filmsCards])
+  }, [post])
 
   const handleClick = id => {
     scrollTo(id)
