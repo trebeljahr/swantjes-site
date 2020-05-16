@@ -1,25 +1,44 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const FilmTemplate = ({ data }) => {
   const rootRef = useRef(null)
-  const post = data.ghostPost
-  const parser = new DOMParser()
-  const firstParse = parser.parseFromString(post.html, "text/html")
-  const body = firstParse.getElementsByTagName("body")
-  const filmsCardHTML = firstParse.getElementsByTagName("figure")
-  const filmsHTML = firstParse.getElementsByTagName("iframe")
+  const [post] = useState(data.ghostPost)
+  const [parser] = useState(new DOMParser())
+  const [firstParse] = useState(parser.parseFromString(post.html, "text/html"))
+  const [body] = useState(firstParse.getElementsByTagName("body"))
+  const [filmsCardHTML] = useState(firstParse.getElementsByTagName("figure"))
+  const [filmsHTML] = useState(firstParse.getElementsByTagName("iframe"))
+  const [options] = useState({
+    root: document.querySelector("#scrollArea"),
+    rootMargin: "0px",
+    threshold: 1,
+  })
+  const [activeElem, setActiveElem] = useState("film-0")
+  const callback = entries => {
+    if (entries[0].isIntersecting) {
+      setActiveElem(entries[0].target.id)
+    }
+  }
+  const [observer] = useState(new IntersectionObserver(callback, options))
 
-  let films = []
+  let filmsCards = []
+  for (let i = 0; i < filmsCardHTML.length; i++) {
+    filmsCardHTML[i].setAttribute("id", `film-${i}`)
+    filmsCardHTML[i].classList.add("iframe-container")
+    filmsCards = [...filmsCards, filmsCardHTML[i]]
+    observer.observe(filmsCardHTML[i])
+  }
+
   for (let i = 0; i < filmsHTML.length; i++) {
     filmsHTML[i].classList.add("single-film-container")
-    filmsCardHTML[i].setAttribute("id", `film-${i}`)
     filmsHTML[i].removeAttribute("width")
     filmsHTML[i].removeAttribute("height")
-    filmsCardHTML[i].classList.add("iframe-container")
-    films = [...films, filmsHTML[i]]
   }
+  const [films] = useState(filmsCards)
+
   useEffect(() => {
     let rawElements = body[0].children
     let elements = []
@@ -28,18 +47,36 @@ const FilmTemplate = ({ data }) => {
       elements.push(rawElements[i])
     }
     elements.forEach(elem => {
-      console.log(elem)
       rootRef.current.appendChild(elem)
     })
   }, [body])
 
+  useEffect(() => {
+    observer.observe(rootRef.current)
+    filmsCards.forEach(card => {
+      observer.observe(card)
+    })
+  }, [observer, filmsCards])
+
+  const handleClick = id => {
+    scrollTo(id)
+  }
   return (
     <Layout color="#1f2839" sub={"films"}>
-      {/* <div className="film-numbers">
+      <div className="film-numbers">
         {films.map((_, index) => (
-          <a href={`#film-${index}`}>{index + 1}</a>
+          <button
+            key={`film-button-${index}`}
+            onClick={() => handleClick(`#film-${index}`)}
+            style={{
+              border:
+                activeElem === `film-${index}` ? "1px white solid" : "none",
+            }}
+          >
+            {index + 1}
+          </button>
         ))}
-      </div> */}
+      </div>
       <div className="scrollable-container film-container" ref={rootRef} />
     </Layout>
   )

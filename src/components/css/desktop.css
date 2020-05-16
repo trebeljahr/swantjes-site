@@ -23,11 +23,12 @@
 @media only screen and (min-width: 800px) {
   .desktop-container {
     display: grid;
-    grid-template-rows: 4fr 14fr 2fr;
+    grid-template-rows: 4fr 80vh 2fr;
     grid-template-columns: 30vw auto 5vw;
     row-gap: 20px;
     width: 100vw;
     height: 100vh;
+    padding: 100px;
     align-items: start;
     justify-items: center;
   }
