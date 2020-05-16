@@ -33,6 +33,7 @@ const FilmTemplate = ({ data }) => {
         filmsCardHTML[i].setAttribute("id", `film-${i}`)
         filmsCardHTML[i].classList.add("iframe-container")
         filmsCards = [...filmsCards, filmsCardHTML[i]]
+        observer.observe(filmsCardHTML[i])
       }
       setFilms(filmsCards)
       for (let i = 0; i < filmsHTML.length; i++) {
