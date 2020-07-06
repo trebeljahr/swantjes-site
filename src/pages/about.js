@@ -5,9 +5,15 @@ import aboutFrame from "../assets/videos/about.jpg"
 import instaIcon from "../assets/images/instagram.png"
 import youtubeIcon from "../assets/images/youtube.png"
 import { Loader } from "../components/Loader"
+import converter from "number-to-words"
 
+const convertMsToYears = ms => Math.floor(ms / 1000 / 60 / 60 / 24 / 365)
 const About = () => {
   const [loading, setLoading] = useState(true)
+  const birthday = new Date("1999-06-05")
+  const elapsedTime = convertMsToYears(Date.now() - birthday) + 1
+  const elapsedTimeString = converter.toWords(elapsedTime)
+
   return (
     <Layout color="#4f2223" site="about">
       <div className="container about-container">
@@ -33,7 +39,9 @@ const About = () => {
         </div>
         <h2 id="about-heading">about</h2>
         <p id="about-text">
-          Twenty-year-old girl, dreaming of becoming a documentary filmmaker and
+          {elapsedTimeString.charAt(0).toUpperCase() +
+            elapsedTimeString.slice(1)}
+          -year-old woman, dreaming of becoming a documentary filmmaker and
           perceptive storyteller.
         </p>
         <div className="social-media-bar">
