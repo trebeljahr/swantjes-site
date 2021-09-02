@@ -15,7 +15,7 @@ const About = () => {
   const elapsedTimeString = converter.toWords(elapsedTime)
 
   return (
-    <Layout color="#4f2223" site="about">
+    <Layout color="white" site="about">
       <div className="container about-container">
         <div className="video-container">
           <Loader loading={loading} color="white" />
