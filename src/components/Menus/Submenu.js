@@ -13,7 +13,7 @@ export const SubMenu = ({ link, menuPoints = [], subMenu, setSubMenu }) => {
       <h3 onClick={toggle}>
         <Link
           activeStyle={{ color: "grey" }}
-          to={`/${link}/${menuPoints[0].node.slug}`}
+          to={`/${link}/${menuPoints[0].slug}`}
           partiallyActive={true}
           onClick={e => e.preventDefault()}
         >
@@ -21,7 +21,7 @@ export const SubMenu = ({ link, menuPoints = [], subMenu, setSubMenu }) => {
         </Link>
       </h3>
       {subMenu === link &&
-        menuPoints.map(({ node: { slug, title } }) => (
+        menuPoints.map(({ slug, title }) => (
           <h3 key={slug}>
             <Link
               activeStyle={{

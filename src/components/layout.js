@@ -9,7 +9,7 @@ import "./css/main.css"
 import "./css/desktop.css"
 import "./css/mobile.css"
 
-const Layout = ({ children, color, sub, site }) => {
+const Layout = ({ children, color, sub }) => {
   if (typeof window !== `undefined`) {
     return (
       <ThemeProvider theme={theme}>
@@ -33,12 +33,7 @@ const Layout = ({ children, color, sub, site }) => {
                     backgroundColor: color,
                   }}
                 >
-                  <Navbar
-                    color={color}
-                    desktop={matches.desktop}
-                    sub={sub}
-                    site={site}
-                  />
+                  <Navbar color={color} desktop={matches.desktop} sub={sub} />
                   {children}
                 </div>
               </>

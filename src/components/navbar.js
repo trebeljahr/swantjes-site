@@ -3,9 +3,13 @@ import Link from "gatsby-link"
 import MobileMenu from "./Menus/MobileMenu"
 import { SubMenu } from "./Menus/Submenu"
 
-export function Navbar({ desktop = false, color, sub = "", site }) {
+export function Navbar({ desktop = false, color, sub = "" }) {
   const [subMenu, setSubMenu] = useState(sub)
-  const data = { films: { edges: [45] } }
+  const data = {
+    films: [{ slug: "she", title: "she" }],
+    texts: [{ slug: "paludi", title: "paludi" }],
+  }
+
   return desktop ? (
     <DesktopNavbar data={data} subMenu={subMenu} setSubMenu={setSubMenu} />
   ) : (
@@ -26,7 +30,7 @@ const DesktopNavbar = ({ data, subMenu, setSubMenu }) => {
         {data.films && (
           <SubMenu
             link="films"
-            menuPoints={data.films.edges}
+            menuPoints={data.films}
             subMenu={subMenu}
             setSubMenu={setSubMenu}
           />
@@ -34,7 +38,7 @@ const DesktopNavbar = ({ data, subMenu, setSubMenu }) => {
         {data.texts && (
           <SubMenu
             link="texts"
-            menuPoints={data.texts.edges}
+            menuPoints={data.texts}
             subMenu={subMenu}
             setSubMenu={setSubMenu}
           />
