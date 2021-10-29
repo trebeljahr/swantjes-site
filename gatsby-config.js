@@ -7,13 +7,6 @@ module.exports = {
     author: `Swantje Furtak`,
   },
   plugins: [
-    {
-      resolve: `gatsby-source-ghost`,
-      options: {
-        apiUrl: process.env.GHOST_URL,
-        contentApiKey: process.env.GHOST_CONTENT_API_KEY,
-      },
-    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
@@ -23,6 +16,7 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
