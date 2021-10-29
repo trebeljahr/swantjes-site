@@ -1,6 +1,7 @@
 body {
   font-family: "Josefin Sans", Helvetica, Arial, "Lucida Grande", sans-serif !important;
   font-weight: 100;
+  font-size: 20px;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -18,13 +19,19 @@ video::-webkit-media-controls-start-playback-button {
   display: none;
   pointer-events: none;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-weight: 300;
+  font-weight: 500;
   margin: 10px;
+  margin-left: 0;
+}
+
+h2 {
+  font-size: 3rem;
 }
 
 a {
@@ -46,12 +53,12 @@ a:active {
   overflow: hidden;
   padding-top: 56.25%;
   position: relative;
-  width: 90%;
+  width: 100%;
+  margin-left: 0;
 }
-.text-container {
-  position: relative;
-  width: 90%;
-  text-align: center;
+
+.content-block {
+  margin-bottom: 4rem;
 }
 
 .single-film-container {
@@ -146,15 +153,6 @@ a:active {
   -ms-overflow-style: none;
 }
 
-.text-post-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  text-align: justify;
-}
-
 .film-numbers {
   display: none;
 }
@@ -189,6 +187,7 @@ a:active {
 }
 p {
   font-size: 1.2rem;
+  line-height: 1.4;
 }
 
 .notes {
@@ -242,9 +241,6 @@ p {
     justify-content: start;
     margin-top: 0;
     padding-top: 0;
-  }
-  .text-post-container {
-    width: 100%;
   }
   .about-container {
     grid-row: 1/4;

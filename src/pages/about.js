@@ -46,10 +46,19 @@ const About = () => {
         </p>
         <div className="social-media-bar">
           <a href="https://www.instagram.com/swantjefurtak/">
-            <img src={instaIcon} alt="instagram-icon" />
+            <img
+              src={instaIcon}
+              alt="instagram-icon"
+              style={{ filter: "invert(1)" }}
+            />
           </a>
           <a href="https://www.youtube.com/channel/UCuVNWp3ieYTkTTQrxPlBnpw">
-            <img src={youtubeIcon} alt="youtube-icon" id="youtube-icon" />
+            <img
+              src={youtubeIcon}
+              alt="youtube-icon"
+              id="youtube-icon"
+              style={{ filter: "invert(1)" }}
+            />
           </a>
         </div>
       </div>

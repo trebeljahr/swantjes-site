@@ -3,7 +3,6 @@ import Head from "./header"
 import Media from "react-media"
 import { Navbar } from "./navbar"
 import { ThemeProvider } from "styled-components"
-import { GlobalStyles } from "../global"
 import { theme } from "../theme"
 import "./css/main.css"
 import "./css/desktop.css"
@@ -13,7 +12,6 @@ const Layout = ({ children, color, sub }) => {
   if (typeof window !== `undefined`) {
     return (
       <ThemeProvider theme={theme}>
-        <GlobalStyles />
         <Media
           queries={{
             mobile: `(max-width: ${theme.mobile})`,
