@@ -61,6 +61,7 @@ const FilmTemplate = ({ data }) => {
   const handleClick = id => {
     scrollTo(id)
   }
+
   return (
     <Layout color="#1f2839" sub={"films"}>
       <div className="film-numbers">
