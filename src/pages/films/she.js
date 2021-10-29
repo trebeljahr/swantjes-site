@@ -4,7 +4,247 @@ import Layout from "../../components/layout"
 const She = () => {
   return (
     <Layout color="white" site="films">
-      She
+      <div class="scrollable-container film-container">
+        <h2>intro</h2>
+        <p>
+          On a cold evening in March, a young girl starts traveling. She has
+          nothing more than a camera and a few notebooks in her backpack. An
+          airplane ticket to Kathmandu, Nepal, in her hands. Five months of time
+          lay in front of her.
+        </p>
+        <p>
+          This is a short film series for everyone who fears to step out. A few
+          jars full of courage. &nbsp;And a perspective on the world through the
+          eyes of a 19-year-old girl.
+        </p>
+        <figure class="kg-card kg-embed-card iframe-container" id="film-0">
+          <iframe
+            title="intro"
+            src="https://www.youtube.com/embed/ya1dqwOr_Zg?feature=oembed"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+            class="single-film-container"
+          ></iframe>
+        </figure>
+        <h2>1 arlanda </h2>
+        <p>
+          Somewhere in the middle of a Swedish airport a girl is lost. This is
+          the first stopover - really not the place, nor the time to question a
+          journey. But an unknown language roars from the speakers. Strangers
+          jostle her. She never felt that small before.
+        </p>
+        <p>
+          Snow is falling outside of the window and she takes a deep breath.
+          Sometimes there are moments in life, when you feel small. Sometimes
+          there are moments in life, when you can’t do more than taking a deep
+          breath. Sometimes there are moments in life, when you know that
+          everything will be fine.
+        </p>
+        <figure class="kg-card kg-embed-card iframe-container" id="film-1">
+          <iframe
+            title="arlanda"
+            src="https://www.youtube.com/embed/NsILmbXWlz8?feature=oembed"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+            class="single-film-container"
+          ></iframe>
+        </figure>
+        <h2>2 kathmandu</h2>
+        <p>
+          She was in chaos. There were people around her. The burning sun on her
+          head. And dust in her lungs. &nbsp;It ´s unsure what happens in your
+          brain in moments like these. You´re not able to handle the situation.
+        </p>
+        <p>
+          You just see and feel and smell. Instead of reacting you remember. As
+          if those first days in a new country crystallize immediately.
+        </p>
+        <figure class="kg-card kg-embed-card iframe-container" id="film-2">
+          <iframe
+            title="kathmandu"
+            src="https://www.youtube.com/embed/e-R8ZvN0QlY?start=24&amp;feature=oembed"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+            class="single-film-container"
+          ></iframe>
+        </figure>
+        <h2>3 the bus</h2>
+        <p>
+          The moment she leaves dusty, crowded Kathmandu, she can breathe again.
+          A country is bigger than just its capital city. And when you sit in a
+          bus and new people enter at every station you get to see the faces of
+          Nepal - a mother, a young school girl, a man dressed all in white.
+        </p>
+        <p>
+          Leave the town, go on a ride and open your eyes. <br />
+        </p>
+        <figure class="kg-card kg-embed-card iframe-container" id="film-3">
+          <iframe
+            title="the bus"
+            src="https://www.youtube.com/embed/-8vOWdavqms?start=7&amp;feature=oembed"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+            class="single-film-container"
+          ></iframe>
+        </figure>
+        <h2>4 monks</h2>
+        <p>
+          In uniform hours the days with the monks past by. &nbsp;In a small
+          Buddhist monastery at the edge of a national park, she found a home
+          for a week. Ran to the waterfall. Told German fairytales. And closed
+          her eyes in the regular gong of the singing bowls. &nbsp; <br />
+        </p>
+        <figure class="kg-card kg-embed-card iframe-container" id="film-4">
+          <iframe
+            title="monks"
+            src="https://www.youtube.com/embed/qAX8E6_Z7Fc?feature=oembed"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+            class="single-film-container"
+          ></iframe>
+        </figure>
+        <h2>walking</h2>
+        <p>
+          Two girls were standing with a monk in the middle of the orange
+          monastery „But can’t we just hike alone through the national park?“
+          Palden knit his brows „Of course, you can do whatever you want to. But
+          you´re girls and you´re alone and who carries your backpacks?“ „We
+          will.“
+        </p>
+        <p>
+          There wouldn’t be a better example for the naivety of 19-years-olds.
+        </p>
+        <figure class="kg-card kg-embed-card iframe-container" id="film-5">
+          <iframe
+            title="walking"
+            src="https://wwwyoutube.com/embed/scY-wbmuOgg?start=2&amp;feature=oembed"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+            class="single-film-container"
+          ></iframe>
+        </figure>
+        <h2>5 anapurna</h2>
+        <p>
+          Her cardiovascular system was made up by her heart and circulatory
+          system. With her heart working as a pump, pushing blood to her organs,
+          tissues and cells. Her blood delivered the oxygen. When rethinking
+          this part of the journey it is always this biochemical process that
+          comes up to her mind. It must have functioned years already. Though it
+          was here in Nepal, that she first sensed it.
+        </p>
+        <p>Sensed how oxygen was flooding her cells.</p>
+        <p>Sensed what it was like to have a body.</p>
+        <p>Sensed what it was like to be alive.</p>
+        <figure class="kg-card kg-embed-card iframe-container" id="film-6">
+          <iframe
+            title="anapurna"
+            src="https://www.youtube.com/embed/5LEaE2zUdQs?start=1&amp;feature=oembed"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+            class="single-film-container"
+          ></iframe>
+        </figure>
+        <p></p>
+        <h2>6 calmness</h2>
+        <p>
+          This story for you soon-to-be-traveler you might take to heart. For
+          all the runners out there. This is a secret I want to share.
+        </p>
+        <figure class="kg-card kg-embed-card iframe-container" id="film-7">
+          <iframe
+            title="calmness"
+            src="https://www.youtube.com/embed/e7GvJS1mdGE?feature=oembed"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+            class="single-film-container"
+          ></iframe>
+        </figure>
+        <h2>7 sweetness</h2>
+        <p>
+          In one of the dusty streets of Nargakot, hidden behind wooden walls
+          and corrugated sheets, there is dark room. They arrive early in the
+          morning. A long bus ride in their bones. Still tired and exhausted
+          from the heat. They order a cup of milk tea. Not even looking up. ,
+          When suddenly the room changes. I guess, miracles happen in places you
+          never expect them to see.
+        </p>
+        <figure class="kg-card kg-embed-card iframe-container" id="film-8">
+          <iframe
+            title="sweetness"
+            src="https://www.youtube.com/embed/ffOdlz3SoDA?start=19&amp;feature=oembed"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+            class="single-film-container"
+          ></iframe>
+        </figure>
+        <h2>8 humboldt</h2>
+        <p>
+          This life was to close to a dream she never dared to speak out loud.
+          Walking through a jungle. Those adventures were out of books. But here
+          she was standing in the middle of a chirping green.
+        </p>
+        <figure class="kg-card kg-embed-card iframe-container" id="film-9">
+          <iframe
+            title="humboldt"
+            src="https://www.youtube.com/embed/vPp6lrWekhM?feature=oembed"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+            class="single-film-container"
+          ></iframe>
+        </figure>
+        <h2>9 amit</h2>
+        <p>
+          People you meet on your journey are like books. Some of them will open
+          the pages and read out their story. I feel like this is one of the
+          most beautiful gifts a stranger can give to you. This film isn´ t the
+          story of the young girl. This is one of Amit´s and she just listened
+          to it, with glowing ears.
+        </p>
+        <figure class="kg-card kg-embed-card iframe-container" id="film-10">
+          <iframe
+            title="amit"
+            src="https://www.youtube.com/embed/Y8d2xXIwScg?feature=oembed"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+            class="single-film-container"
+          ></iframe>
+        </figure>
+        <h2>10 end</h2>
+        <p>
+          "Once upon a time there was a slender young girl standing for a minute
+          alone in a big airport building in Kathmandu, Nepal. The last six
+          weeks she had travelled through a small part of Nepal with a group of
+          three friends."
+        </p>
+        <p>
+          The girl laid down her pencil. She had just written the last sentence
+          in her Nepal diary, her great book of fairytales. In front of her jars
+          were lining up. All open. Their colors floating inside the walls. Her
+          brush had turned those colors to words. She was proud.
+        </p>
+        <figure class="kg-card kg-embed-card iframe-container" id="film-11">
+          <iframe
+            title="end"
+            src="https://www.youtube.com/embed/GvjCbHBE_Rg?feature=oembed"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+            class="single-film-container"
+          ></iframe>
+        </figure>
+      </div>
+      )
     </Layout>
   )
 }
