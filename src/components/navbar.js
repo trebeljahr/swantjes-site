@@ -1,57 +1,20 @@
 import React, { useState } from "react"
 import Link from "gatsby-link"
-import { StaticQuery, graphql } from "gatsby"
 import MobileMenu from "./Menus/MobileMenu"
 import { SubMenu } from "./Menus/Submenu"
 
 export function Navbar({ desktop = false, color, sub = "", site }) {
   const [subMenu, setSubMenu] = useState(sub)
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          films: allGhostPost(
-            filter: { tags: { elemMatch: { name: { eq: "films" } } } }
-          ) {
-            edges {
-              node {
-                title
-                slug
-              }
-            }
-          }
-          texts: allGhostPost(
-            filter: { tags: { elemMatch: { name: { eq: "texts" } } } }
-          ) {
-            edges {
-              node {
-                title
-                slug
-              }
-            }
-          }
-        }
-      `}
-      render={data => {
-        if (!data) {
-          return null
-        }
-        return desktop ? (
-          <DesktopNavbar
-            data={data}
-            subMenu={subMenu}
-            setSubMenu={setSubMenu}
-          />
-        ) : (
-          <MobileMenu
-            data={data}
-            color={color}
-            subMenu={subMenu}
-            setSubMenu={setSubMenu}
-          />
-        )
-      }}
-    ></StaticQuery>
+  const data = { films: { edges: [45] } }
+  return desktop ? (
+    <DesktopNavbar data={data} subMenu={subMenu} setSubMenu={setSubMenu} />
+  ) : (
+    <MobileMenu
+      data={data}
+      color={color}
+      subMenu={subMenu}
+      setSubMenu={setSubMenu}
+    />
   )
 }
 
